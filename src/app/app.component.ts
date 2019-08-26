@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { from } from 'rxjs';
+
 
 
 @Component({
@@ -10,5 +10,4 @@ import { from } from 'rxjs';
 })
 export class AppComponent {
  
-  
 }
