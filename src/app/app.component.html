@@ -1,23 +1,10 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-      <div class="navbar-header">
-          <a href="#" class="navbar-brand">Sanaya Mansion</a>
-      </div>
-  
-  <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-          <li routerLinkActive="active"><a routerLink='/recipes'>Cataring</a></li>
-          <li routerLinkActive="active"><a routerLink='/shopping-list'>Store</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right ">
-          <li class="dropdown" appDropDown>
-              <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                  <li ><a style="cursor: pointer;"></a>Save Data</li>
-                  <li ><a style="cursor: pointer;"></a>Fatch Data</li>
-              </ul>
-          </li>
-      </ul>
+<app-header></app-header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <router-outlet></router-outlet>
     </div>
   </div>
-</nav> 
+</div>
