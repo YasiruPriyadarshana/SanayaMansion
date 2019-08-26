@@ -9,7 +9,8 @@ import {FormsModule} from '@angular/forms';
 import { StoresComponent } from './stores/stores.component';
 import { CateringComponent } from './catering/catering.component';
 import { HeaderComponent } from './header/header.component';
-import { DropDownDirective } from './shared/dropdown.directive'
+import { DropDownDirective } from './shared/dropdown.directive';
+import { SanayaHomeComponent } from './sanaya-home/sanaya-home.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DropDownDirective } from './shared/dropdown.directive'
     StoresComponent,
     CateringComponent,
     HeaderComponent,
-    DropDownDirective
+    DropDownDirective,
+    SanayaHomeComponent
   ],
   imports: [
     BrowserModule,
