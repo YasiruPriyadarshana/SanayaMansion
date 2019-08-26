@@ -6,7 +6,7 @@ import { CateringComponent } from './catering/catering.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'/catering', pathMatch:'full' },
-  { path: 'cataring', component:CateringComponent, children: [
+  { path: 'catering', component:CateringComponent, children: [
     
   ]},
   { path: 'stores', component:StoresComponent }
