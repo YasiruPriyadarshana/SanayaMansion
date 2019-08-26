@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 
 import {FormsModule} from '@angular/forms';
+import { StoresComponent } from './stores/stores.component';
+import { CateringComponent } from './catering/catering.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    StoresComponent,
+    CateringComponent,
   ],
   imports: [
     BrowserModule,
