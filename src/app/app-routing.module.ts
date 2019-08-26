@@ -5,7 +5,7 @@ import { CateringComponent } from './catering/catering.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo:'/recipes', pathMatch:'full' },
+  { path: '', redirectTo:'/cataring', pathMatch:'full' },
   { path: 'cataring', component:CateringComponent, children: [
     
   ]},
