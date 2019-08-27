@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img style="max-height: 300px;"
+         [src]="catering.imagePath" alt="{{catering.name}}" class="img-responsive">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-20">
+        <h1>{{ catering.name }}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropDown>
+            <button type="button" class="btn btn-primary dropdown-toggle">Menu types
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a (click)="onAddToSoppingList()" style="cursor: pointer;">Rs 1990.00</a></li>
+                <li><a style="cursor: pointer;" (click)="onEditCatering()">Rs 2450.00</a></li>
+                <li><a style="cursor: pointer;">Rs 3200.00</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{catering.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ingredient of catering.ingredients">{{ingredient.name}} - {{ingredient.amount}}</li>
+        </ul>
+    </div>
+</div>

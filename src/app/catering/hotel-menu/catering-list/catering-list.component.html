@@ -1,0 +1,15 @@
+<h1 class="add">Catering Management</h1>
+<div class="row">
+        <div class="col-xs-12">
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-catering-item *ngFor="let cateringEl of catering;let i = index"
+            [catering]="cateringEl"
+            [index]="i"></app-catering-item>
+        </div>
+    </div>
+
+    
