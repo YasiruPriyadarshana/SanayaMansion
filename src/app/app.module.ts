@@ -63,6 +63,8 @@ import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/c
 import { CateringListComponent } from './catering/hotel-menu/catering-list/catering-list.component';
 import { CateringItemComponent } from './catering/hotel-menu/catering-list/catering-item/catering-item.component';
 import { ShoppingListService } from './catering/shopping-list/shopping-list.service';
+import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
@@ -114,7 +116,9 @@ import { ShoppingListService } from './catering/shopping-list/shopping-list.serv
     CateringEditComponent,
     CateringDetailComponent,
     CateringListComponent,
-    CateringItemComponent
+    CateringItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent
     
     
 

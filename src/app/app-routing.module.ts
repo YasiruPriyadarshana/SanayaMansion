@@ -18,6 +18,7 @@ import { AppCusComponent } from './customer/app-cus.component';
 import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.component';
 import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
 import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
+import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 
 
 const routes: Routes = [
@@ -49,7 +50,8 @@ const routes: Routes = [
   ]},
   
   { path: 'staff', component:AppstaffComponent},
-  {path: 'customer', component: AppCusComponent }
+  {path: 'customer', component: AppCusComponent },
+  {path: 'shopping-list',component: ShoppingListComponent}
 ];
 
 @NgModule({
