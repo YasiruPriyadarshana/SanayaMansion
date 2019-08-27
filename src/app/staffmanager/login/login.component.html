@@ -1,0 +1,95 @@
+<div class="login-page animate">
+<!--        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+
+                <h1>LOG IN <hr><small>Hotel Sanaya Mansion</small></h1>
+                
+
+                <form (ngSubmit)="onSubmit( )" #f="ngForm" >
+
+                    <div 
+                        id="user-data" 
+                        ngModelGroup="userData"
+                        #userData="ngModelGroup">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-underline input-lg" ngModel  id="un" placeholder="Username" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="password" class="form-control input-underline input-lg" ngModel id="pw" placeholder="Password" required>
+                        </div>
+                    </div>
+
+
+
+                    <div class="valid">
+                            <p *ngIf="!userData.valid && userData.touched" color>*Cannot Insert Empty Fields</p>
+                    </div>
+
+
+                    <button class="btn btn-primary" type="submit" [disabled]="!f.valid"> Log in </button>
+                </form>
+            
+
+            </div>	
+        </div>
+    </div> -->
+
+
+    <div class="col-lg-4 col-lg-offset-4">
+            <h2>
+                <hr>
+                <h1>LOG IN <hr><small>Hotel Sanaya Mansion</small><hr></h1>
+                
+            </h2>
+        </div>
+        
+        <!-- <div class="col-sm-5"> -->
+                <div class="col-lg-4 col-lg-offset-4">
+        
+        <form (ngSubmit)="onSubmit( )" #f="ngForm" >
+                <div 
+                id="user-data" 
+                ngModelGroup="userData"
+                #userData="ngModelGroup">
+
+                        
+                        
+                        <div class="form-group">
+                            <input
+                             type="text"
+                             id="un" 
+                             class="form-control" 
+                             ngModel
+                             name=un;
+                             placeholder="Username"
+                             required>
+                        </div>
+               
+        
+                    
+                            <div class="form-group">
+                                    <input
+                                     type="password"
+                                     id="pw" 
+                                     class="form-control" 
+                                     ngModel
+                                     name=pw;
+                                     placeholder="Enter Password"
+                                     required>
+                                </div>
+                </div>
+            
+                <div class="valid">
+                <p *ngIf="!userData.valid && userData.touched" color>*Cannot Insert Empty Fields</p>
+                </div>
+                    <button
+                     class="btn btn-primary my-8 my-sm-8"
+                      type="submit"
+                      [disabled]="!f.valid"
+                      >Log In</button>
+            </form>
+        </div>
+</div>

@@ -1,0 +1,142 @@
+<div class="col-lg-4 col-lg-offset-4">
+    <h2>
+        Register Employees
+        <hr>
+    </h2>
+</div>
+
+        <div class="col-lg-4 col-lg-offset-4">
+
+<form (ngSubmit)="onSubmit( )" #f="ngForm" >
+        <div 
+        id="user-data" 
+        ngModelGroup="userData"
+        #userData="ngModelGroup">
+
+            <div class="form-group">
+                <label for="eid">Employee ID</label>
+                <input
+                 type="text"
+                  id="eid" 
+                  class="form-control"
+                  ngModel
+                  name="eid"
+                  placeholder="Enter new ID"
+                  required> 
+            </div>
+    
+            <div class="form-group">
+                    <label for="fullName">Employee's Full Name</label>
+                    <input
+                     type="text"
+                     id="fullName" 
+                     class="form-control"
+                     ngModel
+                     name=fullName;
+                     placeholder="Enter Employee's Full Name"
+                     required>      
+                </div>
+
+                <div class="form-group">
+                        <label for="intName">Employee's Name with Initials</label>
+                        <input
+                         type="text"
+                         id="intName" 
+                         class="form-control"
+                         ngModel
+                         name=intName;
+                         placeholder="Enter Name with Initials"
+                         required>      
+                    </div>        
+            
+                <div class="form-group">
+                        <label for="nic">NIC Number</label>
+                        <input
+                         type="text"
+                         id="nic" 
+                         class="form-control" 
+                         ngModel
+                         name=nic;
+                         placeholder="Enter NIC here"
+                         required>
+                    </div>
+    
+                    <div class="form-group">
+                            <label for="bdate">Date of Birth</label>
+                            <input
+                             type="date"
+                             id="bdate" 
+                             class="form-control" 
+                             ngModel
+                             name=bdate;
+                             required>
+                    </div>
+            
+            
+            <div class="form-group">
+                <label for="dept">Department</label>
+                <select 
+                id="dept" 
+                class="form-control"
+                [ngModel]="defaultQuestion"
+                name="dept">
+                    <option value="mgt">Management</option>
+                    <option value="ahr">Accounts & HR</option>
+                    <option value="fnb">Food & Beverages</option>
+                    <option value="ktc">Kitchen</option>
+                    <option value="str">Store</option>
+                    <option value="sec">Security</option>
+                    <option value="hk">House Keeping</option>
+                    </select>
+            </div>
+                
+                
+                <div class="form-group">
+                    <label for="desg">Designation</label>
+                    <input
+                     type="text"
+                     id="desg" 
+                     class="form-control" 
+                     ngModel
+                     name=desg;
+                     placeholder="Enter Employee's Designation here"
+                     required>
+                </div>
+
+
+                <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input
+                         type="tel"
+                         id="phone" 
+                         class="form-control" 
+                         ngModel
+                         name=phone;
+                         placeholder="Enter Employee's Phone"
+                         required>
+                    </div>
+
+
+            
+                    <div class="form-group">
+                            <label for="add">Address</label>
+                            <input
+                             type="text"
+                             id="add" 
+                             class="form-control" 
+                             ngModel
+                             name=add;
+                             placeholder="Enter Employee's Address"
+                             required>
+                        </div>
+        </div>
+    
+        <div class="valid">
+        <p *ngIf="!userData.valid && userData.touched" color>*Cannot Insert Empty Fields</p>
+        </div>
+            <button
+             class="btn btn-primary"
+              type="submit"
+              [disabled]="!f.valid">Submit</button>
+    </form>
+</div>

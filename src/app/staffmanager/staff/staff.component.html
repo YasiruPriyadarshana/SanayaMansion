@@ -1,0 +1,15 @@
+<div class="rw">
+    <div class="col-md-5">
+        <app-attendance
+            (memberWasSelected)="selectedMember = $event"></app-attendance>
+    </div>
+    
+    <div class="col-md-7">
+        <app-employee
+            *ngIf="selectedMember; else infoText"
+            [staff]="selectedMember"></app-employee>
+        <ng-template #infoText>
+            <!-- <p>Select a Member Here!!!</p> -->
+        </ng-template>
+    </div>
+</div>

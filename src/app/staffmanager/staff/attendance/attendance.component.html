@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h1>Hotel Staff</h1><hr>
+        <!-- <button class="btn btn-success" (click)="onSelect('empregister')">New Member</button><hr> -->
+    </div>
+
+    <hr>
+    <hr>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <app-member
+                *ngFor="let wstaff of staff"
+                [staff]="wstaff"
+                (memberSelected)="onMemberSelected(wstaff)"></app-member>
+        </div>
+    </div>
+</div>
+
+

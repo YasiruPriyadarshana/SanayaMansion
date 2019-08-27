@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xs-12">
+        <hr>
+        <form>
+            <div class="row">
+                <div class="col-sm-4 form-group">
+                  <label for="name">Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    class="form-control"
+                    #nameInput>
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="id">Employee ID</label>
+                    <input 
+                        type="text" 
+                        id="id" 
+                        class="form-control"
+                        #idInput> 
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="shift">Shift</label>
+                    <input 
+                        type="text" 
+                        id="shift" 
+                        class="form-control"
+                        #shiftInput>                 
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+                        <button class="btn btn-success" type="submit" (click)="onAddItem()">Add Schedule</button>
+                        <!-- <button class="btn btn-danger" type="submit">Delete Schedule</button> -->
+                        <button class="btn btn-primary" type="reset">Clear Schedule</button>
+                    </div>
+                </div>
+        
+            </div>
+        </form>
+    </div>
+</div>

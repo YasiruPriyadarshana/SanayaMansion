@@ -1,0 +1,42 @@
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"> Staff Details </a>
+            <div class="search">
+                <form class="form-inline">
+                    <div class="col-sm-0">
+                    <input class="form-control mr-sm-0" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="submit"> Search </button>    
+                    </div>      
+                </form>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <li> <a href="#" (click)="onSelect('staff')"> Members </a> </li>
+                <li> <a href="#" (click)="onSelect('empregister')"> Register </a> </li>
+                <li> <a href="#" (click)="onSelect('schedules')"> Work Schedule </a> </li>
+                <li> <a href="#" (click)="onSelect('staff-attendance')"> Staff-Attendance </a> </li>
+                <!-- <li> <a href="#" (click)="onSelect('reg')"> Reg </a> </li> -->
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"(click)="onSelect('reg')">Home</a></li>
+                <li><a href="#" (click)="onSelect('login')">Log In</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Payment</a> </li>
+                        <li><a href="#" class="dropdown-item">Event Manager</a> </li>
+                            <div class="dropdown-divider"></div>
+                        <li><a href="#" class="dropdown-item">Property Manager</a> </li>
+                        <li><a href="#" class="dropdown-item">Customer Manager</a> </li>
+                    </ul>
+               </li> 
+            </ul>
+        </div>
+    </div>
+</div>
+

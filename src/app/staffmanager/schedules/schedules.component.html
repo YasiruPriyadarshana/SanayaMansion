@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-xs-10">
+        <h2>WORK SCHEDULE</h2>
+
+        <app-shedules-edit
+            (scheduleAdded)="onScheduleAdded($event)"></app-shedules-edit>
+        <hr>
+
+        <div class="container">
+                <table class="table table-trapped">
+        
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Employee ID</th>
+                                <th>Duty Shift</th>
+                                <th>Update/Delete</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            <tr *ngFor="let schedule of wschedules">
+                                <td>{{schedule.name}}</td>
+                                <td>{{schedule.id}}</td>
+                                <td>{{schedule.shift}}</td>
+                                <td><button class="btn btn-success" (click)=" onUpdate() ">Update</button>
+                                <button class="btn btn-danger" (click)=" onDestroy() ">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>        
+
+
+                <!-- //(click)="getCurrentUse(data) -->
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <h1><p>Staff Attendance</p></h1>
+        </div>
+        
+    </div>
+    
+    
+    <form>
+        <div class="col-lg-4 col-lg-offset-4">
+    
+            <div class="form-group">
+                <hr>
+                <label for="today">Today</label> 
+                <!--  already commented  <input type="date" class="form-control" id="today"> -->
+                <input type="date" class="form-control" id="today" #todayInput required>
+            </div>
+            <hr>
+
+            
+
+
+
+
+
+             <div class="form-group">
+                <label for="id">Employee ID</label>
+                <input type="text" class="form-control" id="id" placeholder="Enter Employee ID" #idInput required>
+            </div>
+    
+            <div class="form-group">
+                <label for="shift">Work Shift</label>
+                <input type="text" class="form-control" id="shift" placeholder="Enter Work Shift" #shiftInput required>
+            </div>
+    
+            <div class="form-group">
+                <label for="atime">Arrival Time</label>
+                <input type="time" class="form-control" id="atime" #atInput required>
+            </div>
+    
+            <div class="form-group">
+                <label for="ltime">Leaving Time</label>
+                <input type="time" class="form-control" id="ltime" #ltInput>
+            </div>
+    
+            <div class="save">
+                <button class="btn btn-success" type="submit" (click)="onSaveDetails()"> Save Details </button>
+            </div>
+            <hr>
+    
+        </div>
+       
+</form>
+
+

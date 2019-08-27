@@ -1,0 +1,16 @@
+<a 
+    href="#" 
+    class="list-group-item clearfix"
+    (click)="onSelected()" >
+        <div class="pull-left">
+            <h4 class="list-group-item-heading"> {{ staff.name }} </h4>
+            <p class="list-group-item-text"> {{ staff.description}} </p>
+        </div>
+        <span class="pull-right">
+            <img 
+            [src]="staff.imagePath"
+            alt="{{ staff.name }}" 
+            class="img-responsive" 
+            style="max-height: 50px;">                    
+        </span>
+</a>
