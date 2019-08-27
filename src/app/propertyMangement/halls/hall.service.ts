@@ -7,10 +7,12 @@ export class HallService {
   hallSelected = new EventEmitter<Hall>();
 
   private  halls : Hall[] = [
-      new Hall('Vebber','img','100,000','new hall'),
-      
-      ];
+    new Hall('Vebber','https://www.venue.royalholloway.ac.uk/wp-content/uploads/2018/02/Founders-Dining-Hall-wedding-1200x630.jpg','100,000','new hall'),
+    new Hall('Vebber','https://www.burgfeistritz.com/wp-content/uploads/2018/07/wedding16-1200x630.jpg','100,000','new hall'),
+    new Hall('Vebber','https://www.manila-hotel.com.ph/wp-content/uploads/2018/01/5-1-1200x630.jpg','100,000','new hall'),
 
+    
+    ];
       getHalls(){
           return this.halls.slice();
       }
