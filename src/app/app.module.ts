@@ -48,6 +48,12 @@ import { GetAttendanceComponent } from './staffmanager/staff-attendance/get-atte
 import { AttendanceComponent } from './staffmanager/staff/attendance/attendance.component';
 import { EmployeeComponent } from './staffmanager/staff/employee/employee.component';
 import { MemberComponent } from './staffmanager/staff/attendance/member/member.component';
+import { HallListComponent } from './propertyMangement/halls/hall-list/hall-list.component';
+import { HallItemComponent } from './propertyMangement/halls/hall-list/hall-item/hall-item.component';
+import { RoomListComponent } from './propertyMangement/rooms/room-list/room-list.component';
+import { VehicleEditComponent } from './propertyMangement/vehicle-list/vehicle-edit/vehicle-edit.component';
+import { RoomItemComponent } from './propertyMangement/rooms/room-list/room-item/room-item.component';
+import { StaffHeaderComponent } from './staffmanager/header/header.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +91,13 @@ import { MemberComponent } from './staffmanager/staff/attendance/member/member.c
     GetAttendanceComponent,
     AttendanceComponent,
     EmployeeComponent,
-    MemberComponent
+    MemberComponent,
+    HallListComponent,
+    HallItemComponent,
+    RoomListComponent,
+    VehicleEditComponent,
+    RoomItemComponent,
+    StaffHeaderComponent
     
     
 
@@ -103,7 +115,7 @@ import { MemberComponent } from './staffmanager/staff/attendance/member/member.c
     MatListModule,
     
   ],
-  providers: [HallService,VehicleListService,RoomService],
+  providers: [HallService,VehicleListService,RoomService,RoomEditComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
