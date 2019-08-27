@@ -15,13 +15,19 @@ import { VehicleListComponent } from './propertyMangement/vehicle-list/vehicle-l
 import { PropAppComponent } from './propertyMangement/app-prop.component';
 import { AppstaffComponent } from './staffmanager/appstaff.component';
 import { AppCusComponent } from './customer/app-cus.component';
+import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.component';
+import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
+import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo:'/Home', pathMatch:'full' },
   { path: 'Home', component:SanayaHomeComponent},
   { path: 'catering', component:CateringComponent, children: [
-    
+    { path: '' ,component: hotelCateringComponent },
+    { path: 'new', component:CateringEditComponent},
+    { path: ':id', component: CateringDetailComponent},
+    { path: ':id/edit', component:CateringEditComponent}
   ]},
   { path: 'stores', component:StoresComponent, children: [
     

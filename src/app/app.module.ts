@@ -57,6 +57,12 @@ import { StaffHeaderComponent } from './staffmanager/header/header.component';
 import { AppCusComponent } from './customer/app-cus.component';
 import { CusHeaderComponent } from './customer/header/header.component';
 import { DecorationComponent } from './stores/decoration/decoration.component';
+import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.component';
+import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
+import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
+import { CateringListComponent } from './catering/hotel-menu/catering-list/catering-list.component';
+import { CateringItemComponent } from './catering/hotel-menu/catering-list/catering-item/catering-item.component';
+import { ShoppingListService } from './catering/shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -103,7 +109,12 @@ import { DecorationComponent } from './stores/decoration/decoration.component';
     StaffHeaderComponent,
     AppCusComponent,
     CusHeaderComponent,
-    DecorationComponent
+    DecorationComponent,
+    hotelCateringComponent,
+    CateringEditComponent,
+    CateringDetailComponent,
+    CateringListComponent,
+    CateringItemComponent
     
     
 
@@ -121,7 +132,7 @@ import { DecorationComponent } from './stores/decoration/decoration.component';
     MatListModule,
     
   ],
-  providers: [HallService,VehicleListService,RoomService,RoomEditComponent],
+  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
