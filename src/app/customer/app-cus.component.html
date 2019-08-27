@@ -1,7 +1,7 @@
 <app-cu-header (featureSelected)="onNavigate($event)"></app-cu-header>
 <div class="container">
    <div class="row">
-       <div class="col-md-12">
+       <div class="col-xs-3">
           <app-rooms *ngIf="loadedFeature === 'rooms'"></app-rooms> 
           <app-supplier *ngIf="loadedFeature === 'supplier'"></app-supplier> 
           <app-sup-detail *ngIf="loadedFeature === 'sup-detail'"></app-sup-detail>
