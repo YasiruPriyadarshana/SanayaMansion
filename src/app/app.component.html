@@ -2,17 +2,36 @@
 
 
 
+
+
+
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-14">
         <div class="col-md-2">
             <app-main-nav>
-                <a mat-list-item href="#">Catering</a>
-                <a mat-list-item href="#">Store</a>
-                <a mat-list-item href="#">Reservation</a>
+                <div class="d-flex" id="wrapper">
+
+                    <!-- Sidebar -->
+                    <div class="bg-light border-right" id="sidebar-wrapper">
+                      <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Catering</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Stores</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Reservation</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Finance</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Event</a>
+                      </div>
+                    </div>
+                    <!-- /#sidebar-wrapper -->
+                    
+                    
+                      
+                  </div>
             </app-main-nav>
-          </div>
-      <div class="col-md-9"> 
-        <router-outlet></router-outlet>
+          
+      
+        
       </div>
+      <router-outlet></router-outlet>
     </div>
   </div>

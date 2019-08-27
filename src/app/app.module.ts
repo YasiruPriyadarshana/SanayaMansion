@@ -56,6 +56,7 @@ import { RoomItemComponent } from './propertyMangement/rooms/room-list/room-item
 import { StaffHeaderComponent } from './staffmanager/header/header.component';
 import { AppCusComponent } from './customer/app-cus.component';
 import { CusHeaderComponent } from './customer/header/header.component';
+import { DecorationComponent } from './stores/decoration/decoration.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +102,8 @@ import { CusHeaderComponent } from './customer/header/header.component';
     RoomItemComponent,
     StaffHeaderComponent,
     AppCusComponent,
-    CusHeaderComponent
+    CusHeaderComponent,
+    DecorationComponent
     
     
 
