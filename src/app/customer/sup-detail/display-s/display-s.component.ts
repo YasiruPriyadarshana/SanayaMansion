@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild,Output,EventEmitter } from '@angular/core';
-import {Supplier} from 'src/app/shared/supplier.model';
+import {Supplier} from '../../shared/supplier.model';
 
 @Component({
   selector: 'app-display-s',

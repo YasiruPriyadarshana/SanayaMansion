@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Schedule } from 'src/app/shared/schedule.model';
+import { Schedule } from '../../shared/schedule.model';
 
 @Component({
   selector: 'app-work-schedule',

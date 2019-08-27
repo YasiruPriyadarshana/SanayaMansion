@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
-import { Schedule } from 'src/app/shared/schedule.model';
+import { Schedule } from '../../shared/schedule.model';
 
 @Component({
   selector: 'app-shedules-edit',

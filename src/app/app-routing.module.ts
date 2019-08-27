@@ -12,6 +12,8 @@ import { HallStartComponent } from './propertyMangement/halls/hall-start/hall-st
 import { HallEditComponent } from './propertyMangement/halls/hall-edit/hall-edit.component';
 import { HallDetailComponent } from './propertyMangement/halls/hall-detail/hall-detail.component';
 import { VehicleListComponent } from './propertyMangement/vehicle-list/vehicle-list.component';
+import { PropAppComponent } from './propertyMangement/app-prop.component';
+import { AppstaffComponent } from './staffmanager/appstaff.component';
 
 
 const routes: Routes = [
@@ -23,22 +25,24 @@ const routes: Routes = [
   { path: 'stores', component:StoresComponent, children: [
     
   ]},
-  { path: '', redirectTo: '/rooms', pathMatch: 'full'},
-  { path:'rooms', component: RoomsComponent, children: [
+  { path: 'propertyManagement', component: PropAppComponent, children:[
+    { path:'rooms', component: RoomsComponent, children: [
       { path:'',component: RoomStartComponent },
       { path: 'new', component: RoomEditComponent},
       { path: ':id', component: RoomDetailComponent},
-      { path: ':id/edit', component: RoomEditComponent}
-  ] },
-  { path: '', redirectTo: '/halls', pathMatch: 'full'},
+      { path: ':id/edit', component: RoomEditComponent}] },
+ 
   { path:'halls', component: HallsComponent, children: [
       { path:'',component: HallStartComponent },
       { path: 'new', component: HallEditComponent},
       { path: ':id', component: HallDetailComponent},
-      { path: ':id/edit', component: HallEditComponent}
-  ] },
-  { path:'vehicle-list', component: VehicleListComponent },
-];;
+      { path: ':id/edit', component: HallEditComponent}] },
+
+  { path:'vehicle-list', component: VehicleListComponent }
+  ]},
+  
+  { path: 'staff', component:AppstaffComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

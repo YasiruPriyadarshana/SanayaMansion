@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
-import { Attend } from 'src/app/newshared/attend.model';
+import { Attend } from '../../newshared/attend.model';
   
   @Component({
     selector: 'app-get-attendance',

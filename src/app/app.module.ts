@@ -28,6 +28,26 @@ import { SupDetailComponent } from './customer/sup-detail/sup-detail.component';
 import { RoomDetailsComponent } from './customer/room-details/room-details.component';
 import { DisplaySComponent } from './customer/sup-detail/display-s/display-s.component';
 import { DisplayRComponent } from './customer/room-details/display-r/display-r.component';
+import { RoomStartComponent } from './propertyMangement/rooms/room-start/room-start.component';
+import { RoomEditComponent } from './propertyMangement/rooms/room-edit/room-edit.component';
+import { RoomDetailComponent } from './propertyMangement/rooms/room-detail/room-detail.component';
+import { HallsComponent } from './propertyMangement/halls/halls.component';
+import { HallStartComponent } from './propertyMangement/halls/hall-start/hall-start.component';
+import { HallEditComponent } from './propertyMangement/halls/hall-edit/hall-edit.component';
+import { HallDetailComponent } from './propertyMangement/halls/hall-detail/hall-detail.component';
+import { VehicleListComponent } from './propertyMangement/vehicle-list/vehicle-list.component';
+import { PropAppComponent } from './propertyMangement/app-prop.component';
+import { AppstaffComponent } from './staffmanager/appstaff.component';
+import { SchedulesComponent } from './staffmanager/schedules/schedules.component';
+import { ShedulesEditComponent } from './staffmanager/schedules/shedules-edit/shedules-edit.component';
+import { StaffComponent } from './staffmanager/staff/staff.component';
+import { EmpregisterComponent } from './staffmanager/empregister/empregister.component';
+import { StaffAttendanceComponent } from './staffmanager/staff-attendance/staff-attendance.component';
+import { LoginComponent } from './staffmanager/login/login.component';
+import { GetAttendanceComponent } from './staffmanager/staff-attendance/get-attendance/get-attendance.component';
+import { AttendanceComponent } from './staffmanager/staff/attendance/attendance.component';
+import { EmployeeComponent } from './staffmanager/staff/employee/employee.component';
+import { MemberComponent } from './staffmanager/staff/attendance/member/member.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +65,30 @@ import { DisplayRComponent } from './customer/room-details/display-r/display-r.c
     SupDetailComponent,
     RoomDetailsComponent,
     DisplaySComponent,
-    DisplayRComponent
+    DisplayRComponent,
+    RoomStartComponent,
+    RoomEditComponent,
+    RoomDetailComponent,
+    HallsComponent,
+    HallStartComponent,
+    HallEditComponent,
+    HallDetailComponent,
+    VehicleListComponent,
+    PropAppComponent,
+    AppstaffComponent,
+    SchedulesComponent,
+    ShedulesEditComponent,
+    StaffComponent,
+    EmpregisterComponent,
+    StaffAttendanceComponent,
+    LoginComponent,
+    GetAttendanceComponent,
+    AttendanceComponent,
+    EmployeeComponent,
+    MemberComponent
+    
+    
+
   ],
   imports: [
     BrowserModule,
@@ -57,9 +100,10 @@ import { DisplayRComponent } from './customer/room-details/display-r/display-r.c
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    
   ],
-  providers: [],
-  bootstrap: [AppComponent,HallService,VehicleListService,RoomService]
+  providers: [HallService,VehicleListService,RoomService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

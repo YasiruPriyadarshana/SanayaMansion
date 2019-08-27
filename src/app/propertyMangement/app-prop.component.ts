@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app-prop.component.html',
   styleUrls: ['./app-prop.component.css']
 })
-export class AppComponent {
+export class PropAppComponent {
   loadedFeature = 'room';
   onNavigate(feature: string){
     this.loadedFeature = feature;
