@@ -14,6 +14,7 @@ import { HallDetailComponent } from './propertyMangement/halls/hall-detail/hall-
 import { VehicleListComponent } from './propertyMangement/vehicle-list/vehicle-list.component';
 import { PropAppComponent } from './propertyMangement/app-prop.component';
 import { AppstaffComponent } from './staffmanager/appstaff.component';
+import { AppCusComponent } from './customer/app-cus.component';
 
 
 const routes: Routes = [
@@ -41,7 +42,8 @@ const routes: Routes = [
   { path:'vehicle-list', component: VehicleListComponent }
   ]},
   
-  { path: 'staff', component:AppstaffComponent}
+  { path: 'staff', component:AppstaffComponent},
+  {path: 'customer', component: AppCusComponent }
 ];
 
 @NgModule({

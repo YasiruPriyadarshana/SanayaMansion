@@ -1,1 +1,44 @@
 <p>stores works!</p>
+<div class="row">
+<div class="col-xs-2 setmargin">
+        <a href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{type[0].name}}</h4>
+                <p class="list-group-item-text">{{type[0].description}}</p>
+            </div>
+            <span class="pull-right">
+                <img  [src]="type[0].imagePath" alt="{{type.name}}" class="img-responsive" style="max-height: 50px;">
+               
+            </span>
+        </a>
+</div>
+<div class="col-xs-2">
+        <a href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{type[1].name}}</h4>
+                <p class="list-group-item-text">{{type[1].description}}</p>
+            </div>
+            <span class="pull-right">
+                <img  [src]="type[1].imagePath" alt="{{type.name}}" class="img-responsive" style="max-height: 50px;">
+               
+            </span>
+        </a>
+</div>
+<div class="col-xs-2">
+        <a href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{type[2].name}}</h4>
+                <p class="list-group-item-text">{{type[2].description}}</p>
+            </div>
+            <span class="pull-right">
+                <img  [src]="type[2].imagePath" alt="{{type.name}}" class="img-responsive" style="max-height: 50px;">
+               
+            </span>
+        </a>
+</div>
+<div class="col-xs-6 fixp">
+    <app-decoration></app-decoration> 
+</div>
+ 
+</div>
+ 

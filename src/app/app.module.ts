@@ -54,6 +54,8 @@ import { RoomListComponent } from './propertyMangement/rooms/room-list/room-list
 import { VehicleEditComponent } from './propertyMangement/vehicle-list/vehicle-edit/vehicle-edit.component';
 import { RoomItemComponent } from './propertyMangement/rooms/room-list/room-item/room-item.component';
 import { StaffHeaderComponent } from './staffmanager/header/header.component';
+import { AppCusComponent } from './customer/app-cus.component';
+import { CusHeaderComponent } from './customer/header/header.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +99,9 @@ import { StaffHeaderComponent } from './staffmanager/header/header.component';
     RoomListComponent,
     VehicleEditComponent,
     RoomItemComponent,
-    StaffHeaderComponent
+    StaffHeaderComponent,
+    AppCusComponent,
+    CusHeaderComponent
     
     
 

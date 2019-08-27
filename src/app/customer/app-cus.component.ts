@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app-cus.component.html',
   styleUrls: ['./app-cus.component.css']
 })
-export class AppComponent {
+export class AppCusComponent {
   loadedFeature= 'rooms';
 
   onNavigate(feature: string){
