@@ -22,6 +22,12 @@ import { MatListModule } from '@angular/material/list'
 import { HallService } from './propertyMangement/halls/hall.service';
 import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-list.service';
 import { RoomService } from './propertyMangement/rooms/room.service';
+import { RoomsComponent } from './propertyMangement/rooms/rooms.component';
+import { SupplierComponent } from './customer/supplier/supplier.component';
+import { SupDetailComponent } from './customer/sup-detail/sup-detail.component';
+import { RoomDetailsComponent } from './customer/room-details/room-details.component';
+import { DisplaySComponent } from './customer/sup-detail/display-s/display-s.component';
+import { DisplayRComponent } from './customer/room-details/display-r/display-r.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,15 @@ import { RoomService } from './propertyMangement/rooms/room.service';
     HeaderComponent,
     DropDownDirective,
     SanayaHomeComponent,
-    MainNavComponent
+    MainNavComponent,
+    AppComponent,
+    HeaderComponent,
+    RoomsComponent,
+    SupplierComponent,
+    SupDetailComponent,
+    RoomDetailsComponent,
+    DisplaySComponent,
+    DisplayRComponent
   ],
   imports: [
     BrowserModule,

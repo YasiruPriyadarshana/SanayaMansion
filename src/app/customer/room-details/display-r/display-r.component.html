@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-xs-12">
+        <hr>
+        <form>
+            <div class="row">
+                <div class="col-sm-4 form-group">
+                  <label for="id">Customer Name</label>
+                  <input 
+                    type="text" 
+                    id="id" 
+                    class="form-control"
+                    #idInput>
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="name">Customer ID</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        class="form-control"
+                        #nameInput> 
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="pasnic">NIC/Password</label>
+                    <input 
+                        type="text" 
+                        id="pasnic" 
+                        class="form-control"
+                        #pasnicInput>                 
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="rmNo">Room No </label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        class="form-control"
+                        #nameInput> 
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="serType">Service type </label>
+                    <input 
+                        type="text" 
+                        id="serType" 
+                        class="form-control"
+                        #nameInput> 
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+                        <button class="btn btn-success" type="submit" (click)="onAddItem()">Add Room</button>
+                        <button class="btn btn-danger" type="submit">Delete </button>
+                        <button class="btn btn-primary" type="reset">Clear </button>
+                    </div>
+                </div>
+        
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,77 @@
+<form (ngSubmit)="onSubmit( )" #f="ngForm" >
+        <div 
+        id="user-data" 
+        ngModelGroup="userData"
+        #userData="ngModelGroup">
+            <div class="form-group">
+                <label for="customerid">CustomerId</label>
+                <input
+                 type="text"
+                  id="customerid" 
+                  class="form-control"
+                  ngModel
+                  name="customerid"
+                  required> 
+                
+            </div>
+    
+            <div class="form-group">
+                    <label for="cusName">Customer Name</label>
+                    <input
+                     type="text"
+                     id="cusName" 
+                     class="form-control"
+                     ngModel
+                     name=cusName;
+                     required>
+                    
+                      
+                </div>
+            
+                <div class="form-group">
+                        <label for="paaNIC">Passport/NIC</label>
+                        <input
+                         type="text"
+                         id="paaNIC" 
+                         class="form-control" 
+                         ngModel
+                         name=paaNIC;
+                         required>
+                    </div>
+    
+                    <div class="form-group">
+                            <label for="roomNo">RoomNo</label>
+                            <input
+                             type="number"
+                             id="roomNo" 
+                             class="form-control" 
+                             ngModel
+                             name=roomNo;
+                             required>
+                        </div>
+    
+            
+            
+            
+            <div class="form-group">
+                <label for="service">Service Type</label>
+                <select 
+                id="service" 
+                class="form-control"
+                [ngModel]="defaultQuestion"
+                name="service">
+                    <option value="FullBoard">Full Board</option>
+                    <option value="Halfboard">Half Board</option>
+                    <option value="RoomBed">Room & Bed only</option>
+                    </select>
+            </div>
+        </div>
+    
+        <p *ngIf="!userData.valid && userData.touched">User Data is invalid</p>
+    
+            <button
+             class="btn btn-primary"
+              type="submit"
+              [disabled]="!f.valid">Submit</button>
+    </form>
+    
