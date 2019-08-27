@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success"(click)="onNewHall()">New Hall</button>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <app-hall-item
+        *ngFor = "let hallEl of halls; let i = index"
+        [hall]="hallEl" 
+        [index]="i"></app-hall-item>
+    </div>
+</div>
