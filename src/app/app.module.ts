@@ -65,6 +65,7 @@ import { CateringItemComponent } from './catering/hotel-menu/catering-list/cater
 import { ShoppingListService } from './catering/shopping-list/shopping-list.service';
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
+import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
 
 @NgModule({
   declarations: [
@@ -118,7 +119,8 @@ import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/sh
     CateringListComponent,
     CateringItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    SubHeaderComponent
     
     
 
