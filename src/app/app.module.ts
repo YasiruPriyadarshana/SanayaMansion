@@ -19,6 +19,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list'
+import { HallService } from './propertyMangement/halls/hall.service';
+import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-list.service';
+import { RoomService } from './propertyMangement/rooms/room.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,6 @@ import { MatListModule } from '@angular/material/list'
     MatListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,HallService,VehicleListService,RoomService]
 })
 export class AppModule { }
