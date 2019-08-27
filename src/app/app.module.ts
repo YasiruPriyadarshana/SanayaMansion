@@ -66,6 +66,7 @@ import { ShoppingListService } from './catering/shopping-list/shopping-list.serv
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
 import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
+import { StoreItemsComponent } from './stores/store-items/store-items.component';
 
 @NgModule({
   declarations: [
@@ -120,8 +121,8 @@ import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.co
     CateringItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    SubHeaderComponent
-    
+    SubHeaderComponent,
+    StoreItemsComponent
     
 
   ],
@@ -136,6 +137,7 @@ import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.co
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    
     
   ],
   providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService],

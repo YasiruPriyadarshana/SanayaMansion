@@ -19,6 +19,8 @@ import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.comp
 import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
 import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
+import { DecorationComponent } from './stores/decoration/decoration.component';
+import { StoreItemsComponent } from './stores/store-items/store-items.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,8 @@ const routes: Routes = [
     { path: ':id/edit', component:CateringEditComponent}
   ]},
   { path: 'stores', component:StoresComponent, children: [
+    { path: 'appdecoration' ,component: DecorationComponent},
+    { path: 'storeItems',component: StoreItemsComponent}
     
   ]},
   { path: 'propertyManagement', component: PropAppComponent, children:[
