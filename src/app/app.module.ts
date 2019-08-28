@@ -71,6 +71,10 @@ import { OtherComponent } from './event/other/other.component';
 import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
 import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
 import { WeddingsComponent } from './event/weddings/weddings.component';
+import { RoomComponent } from './reservation/room/room.component';
+import { HallComponent } from './reservation/hall/hall.component';
+import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
+import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r-booking-details.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +138,15 @@ import { WeddingsComponent } from './event/weddings/weddings.component';
     WeddingsComponent,
     OtherComponent,
     EventCalendarComponent,
-    AdvertisementsComponent
+    AdvertisementsComponent,
+
+
+    RoomComponent,
+    HallComponent,
+    RBookingDetailsComponent,
+    HBookingDetailsComponent
+
+
   ],
   imports: [
     BrowserModule,

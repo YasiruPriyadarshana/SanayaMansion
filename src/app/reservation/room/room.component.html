@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-10">
+
+        <app-r-booking-details
+        (RbookingAdded)="onRbookingAdded($event)"></app-r-booking-details>""
+<hr>
+
+<h2>Room booking Details</h2>
+
+
+<div class="container">
+  <table class="table table-trapped">
+    
+      <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>NIC</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Arrive</th>
+                  <th>Depart</th>
+                  <th>No of Single rooms</th>
+                  <th>No of Double rooms</th>
+              </tr>
+          </thead>
+  
+          <tbody>
+              <tr *ngFor="let Rbooking of w1booking">
+                  <td>{{Rbooking.bookingID}}</td>
+                  <td>{{Rbooking.name}}</td>
+                  <td>{{Rbooking.nic}}</td>
+                  <td>{{Rbooking.email}}</td>
+                  <td>{{Rbooking.phone}}</td>
+                  <td>{{Rbooking.arrive}}</td>
+                  <td>{{data.depart}}</td>
+                  <td>{{data.sRoom}}</td>
+                  <td>{{data.dRoom}}</td>
+
+                  <td><button class="btn btn-danger" (click)="getCurrentUse(data)">Delete</button>
+                  <button class="btn btn-danger">Update</button></td>
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+      
