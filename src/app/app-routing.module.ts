@@ -40,7 +40,7 @@ const routes: Routes = [
     { path: ':id/edit', component:CateringEditComponent}
   ]},
   { path: 'stores', component:StoresComponent, children: [
-    { path: 'appdecoration' ,component: DecorationComponent},
+    { path: '' ,component: DecorationComponent},
     { path: 'storeItems',component: StoreItemsComponent}
     
   ]},
