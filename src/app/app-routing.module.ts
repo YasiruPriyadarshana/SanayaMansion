@@ -21,6 +21,9 @@ import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/c
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { DecorationComponent } from './stores/decoration/decoration.component';
 import { StoreItemsComponent } from './stores/store-items/store-items.component';
+import { SupplierComponent } from './customer/supplier/supplier.component';
+import { RoomDetailsComponent } from './customer/room-details/room-details.component';
+import { SupDetailComponent } from './customer/sup-detail/sup-detail.component';
 
 
 const routes: Routes = [
@@ -54,7 +57,16 @@ const routes: Routes = [
   ]},
   
   { path: 'staff', component:AppstaffComponent},
-  {path: 'customer', component: AppCusComponent },
+  {path: 'customer', component: AppCusComponent, children: [
+    { path:'rooms',component: RoomsComponent },
+    { path:'supplier',component: SupplierComponent },
+    { path:'roomdetail',component: RoomDetailsComponent },
+    { path:'supplierdetails',component: SupDetailComponent }
+    
+    
+    
+    
+  ] },
   {path: 'shopping-list',component: ShoppingListComponent}
 ];
 

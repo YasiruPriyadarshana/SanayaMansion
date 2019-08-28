@@ -2,11 +2,11 @@
 <app-cu-header (featureSelected)="onNavigate($event)"></app-cu-header>
 
    
-          <app-rooms *ngIf="loadedFeature === 'rooms'"></app-rooms> 
+          <!-- <app-rooms *ngIf="loadedFeature === 'rooms'"></app-rooms> 
           <app-supplier *ngIf="loadedFeature === 'supplier'"></app-supplier> 
           <app-sup-detail *ngIf="loadedFeature === 'sup-detail'"></app-sup-detail>
-          <app-room-details *ngIf="loadedFeature === 'room-details'"></app-room-details>
+          <app-room-details *ngIf="loadedFeature === 'room-details'"></app-room-details> -->
           
-          
+          <router-outlet></router-outlet>
       
          </div>
