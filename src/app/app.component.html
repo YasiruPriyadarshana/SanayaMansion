@@ -6,32 +6,124 @@
 
 
   <div class="row">
-    <div class="col-xs-14">
-        <div class="col-md-2">
+    
+        <div class="col-md-2 addfixi">
             <app-main-nav>
                 <div class="d-flex" id="wrapper">
 
                     <!-- Sidebar -->
-                    <div class="bg-light border-right" id="sidebar-wrapper">
-                      <div class="list-group list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Catering</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Stores</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Reservation</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Finance</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Event</a>
-                      </div>
-                    </div>
-                    <!-- /#sidebar-wrapper -->
                     
-                    
+                        
+                        
+                        
+                        
+                        
+                        
+                       
                       
-                  </div>
+                        <div class="row">
+                          <div class="col-xs-3 bg-light border-right" id="sidebar-wrapper">
+                            <div class="container list-group list-group-flush">
+                                    <div>
+                                        <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                            <li><label routerLink='catering' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Catering
+                                                        <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                                <ul class="nav nav-list tree bullets">
+                                                    <li><a routerLink='catering/0'>Hotel Menu</a></li>
+                                                    <li><a routerLink='catering/1'>Resturent Menu <span class="badge">42</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="divider"></li>
+                                        </ul>
+                                        <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                          <li><label routerLink='stores' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Stores
+                                                      <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                              <ul class="nav nav-list tree bullets">
+                                                  <li routerLink='stores'><a >Decoration</a></li>
+                                                  <li routerLink='stores/storeItems'><a >Store Items<span class="badge">42</span></a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="divider"></li>
+                                      </ul>
+                                      <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                        <li><label routerLink='stores' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Reservation
+                                                    <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                            <ul class="nav nav-list tree bullets">
+                                                
+                                            </ul>
+                                        </li>
+                                        <li class="divider"></li>
+                                    </ul>
+                                    <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                      <li><label routerLink='/stores' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Finance
+                                                  <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                          <ul class="nav nav-list tree bullets">
+                                              
+                                          </ul>
+                                      </li>
+                                      <li class="divider"></li>
+                                  </ul>
+                                  <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                    <li><label routerLink='staff/staffcomponent' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Staff Management
+                                                <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                        <ul class="nav nav-list tree bullets">
+                                          <li><a routerLink='staff/staffcomponent'>Members</a></li>
+                                          <li><a routerLink='staff/empregister'>Register</a></li>
+                                          <li><a routerLink='staff/schedules'>Work Schedule</a></li>
+                                          <li><a routerLink='staff/staffattendence'>Staff Attendance</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                </ul>
+
+                                <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                  <li><label routerLink='/propertyManagement' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Property Management
+                                              <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                      <ul class="nav nav-list tree bullets">
+                                          
+                                      </ul>
+                                  </li>
+                                  <li class="divider"></li>
+                              </ul>
+
+                              <ul class="nav nav-list list-group-item list-group-item-action bg-lighte">
+                                <li><label routerLink='customer/rooms' class="tree-toggle nav-header glyphicon-icon-rpad"><span class="glyphicon glyphicon-folder-close m5"></span>Customer
+                                            <span class="menu-collapsible-icon glyphicon glyphicon-chevron-down"></span></label>
+                                    <ul class="nav nav-list tree bullets">
+                                      <li><a routerLink='customer/rooms'>Rooms</a></li>
+                                      <li><a routerLink='customer/supplier'>supplier</a></li>
+                                      <li><a routerLink='customer/supplierdetails'>Supplier Details</a></li>
+                                      <li><a routerLink='customer/roomdetail'>Room Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                              </ul>
+                              
+                                    </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <!-- dividing part -->
+                     
+
+
+
+
+                 
+        
             </app-main-nav>
           
-      
-        
+            
       </div>
+     
       <router-outlet></router-outlet>
     </div>
-  </div>
+
+    
+
+ 
+    
+  
+ 

@@ -66,6 +66,24 @@ import { ShoppingListService } from './catering/shopping-list/shopping-list.serv
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
 import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
+import { StoreItemsComponent } from './stores/store-items/store-items.component';
+import { OtherComponent } from './event/other/other.component';
+import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
+import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
+import { WeddingsComponent } from './event/weddings/weddings.component';
+import { PayrollComponent } from './Finance/payroll/payroll.component';
+import { SalaryDetailsComponent } from './Finance/payroll/salary-details/salary-details.component';
+import { BillCalculationsComponent } from './Finance/bill-calculations/bill-calculations.component';
+import { EventBillComponent } from './Finance/bill-calculations/event-bill/event-bill.component';
+import { RoomResBillComponent } from './Finance/bill-calculations/room-res-bill/room-res-bill.component';
+import { EditSalaryDetailsComponent } from './Finance/payroll/edit-salary-details/edit-salary-details.component';
+import { ViewDetailsComponent } from './Finance/payroll/salary-details/view-details/view-details.component';
+import { EventBillEditComponent } from './Finance/bill-calculations/event-bill/event-bill-edit/event-bill-edit.component';
+import { RoomResBillEditComponent } from './Finance/bill-calculations/room-res-bill/room-res-bill-edit/room-res-bill-edit.component';
+import { BillCalculations2Component } from './Finance/bill-calculations2/bill-calculations2.component';
+import { HomeComponent } from './Finance/home/home.component';
+import { DailyReportComponent } from './Finance/daily-report/daily-report.component';
+import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-report/edit-daily-report.component';
 
 @NgModule({
   declarations: [
@@ -120,10 +138,33 @@ import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.co
     CateringItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    SubHeaderComponent
-    
+    SubHeaderComponent,
+    StoreItemsComponent,
     
 
+
+    HeaderComponent,
+    WeddingsComponent,
+    OtherComponent,
+    EventCalendarComponent,
+    AdvertisementsComponent,
+
+
+    HeaderComponent,
+    PayrollComponent,
+    SalaryDetailsComponent,
+    BillCalculationsComponent,
+    EventBillComponent,
+    RoomResBillComponent,
+    EditSalaryDetailsComponent,
+    ViewDetailsComponent,
+    EventBillEditComponent,
+    RoomResBillEditComponent,
+    BillCalculations2Component,
+    HomeComponent,
+    LoginComponent,
+    DailyReportComponent,
+    EditDailyReportComponent,
   ],
   imports: [
     BrowserModule,
@@ -136,6 +177,7 @@ import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.co
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    
     
   ],
   providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService],

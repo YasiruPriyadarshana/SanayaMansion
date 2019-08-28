@@ -29,6 +29,10 @@ export class CateringDetailComponent implements OnInit {
     this.cateringService.addIngredientsToSoppingList(this.catering.ingredients);
   }
 
+  onAddToSoppingList2(){
+    this.cateringService.addIngredientsToSoppingList2(this.catering.ingredients2);
+  }
+
   onEditCatering(){
     
     this.router.navigate(['../',this.id, 'edit'], {relativeTo: this.route});

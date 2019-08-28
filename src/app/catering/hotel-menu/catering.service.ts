@@ -28,4 +28,7 @@ export class CateringService{
     addIngredientsToSoppingList(ingredients: Ingredient[]){
         this.slService.addIngredients(ingredients);
     }
+    addIngredientsToSoppingList2(ingredients2: Ingredient[]){
+        this.slService.addIngredients2(ingredients2);
+    }
 }

@@ -19,6 +19,15 @@ import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.comp
 import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
 import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
+import { DecorationComponent } from './stores/decoration/decoration.component';
+import { StoreItemsComponent } from './stores/store-items/store-items.component';
+import { SupplierComponent } from './customer/supplier/supplier.component';
+import { RoomDetailsComponent } from './customer/room-details/room-details.component';
+import { SupDetailComponent } from './customer/sup-detail/sup-detail.component';
+import { SchedulesComponent } from './staffmanager/schedules/schedules.component';
+import { StaffAttendanceComponent } from './staffmanager/staff-attendance/staff-attendance.component';
+import { EmpregisterComponent } from './staffmanager/empregister/empregister.component';
+import { StaffComponent } from './staffmanager/staff/staff.component';
 
 
 const routes: Routes = [
@@ -31,6 +40,8 @@ const routes: Routes = [
     { path: ':id/edit', component:CateringEditComponent}
   ]},
   { path: 'stores', component:StoresComponent, children: [
+    { path: '' ,component: DecorationComponent},
+    { path: 'storeItems',component: StoreItemsComponent}
     
   ]},
   { path: 'propertyManagement', component: PropAppComponent, children:[
@@ -49,8 +60,20 @@ const routes: Routes = [
   { path:'vehicle-list', component: VehicleListComponent }
   ]},
   
-  { path: 'staff', component:AppstaffComponent},
-  {path: 'customer', component: AppCusComponent },
+  { path: 'staff', component:AppstaffComponent, children: [
+    { path:'schedules',component: SchedulesComponent },
+    { path:'staffattendence',component: StaffAttendanceComponent },
+    { path:'empregister',component: EmpregisterComponent },
+    { path:'staffcomponent',component: StaffComponent }
+  ]},
+  {path: 'customer', component: AppCusComponent, children: [
+    { path:'rooms',component: RoomsComponent },
+    { path:'supplier',component: SupplierComponent },
+    { path:'roomdetail',component: RoomDetailsComponent },
+    { path:'supplierdetails',component: SupDetailComponent }
+    
+  ] },
+
   {path: 'shopping-list',component: ShoppingListComponent}
 ];
 

@@ -5,6 +5,7 @@ export class Catering{
     public description:string;
     public imagePath:string;
     public ingredients: Ingredient[];
+  ingredients2: Ingredient[];
 
     constructor(name: string, desc: string, imagePath: string, ingredients: Ingredient[]){
         this.name=name;

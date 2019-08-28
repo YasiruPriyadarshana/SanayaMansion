@@ -1,15 +1,13 @@
-<app-staff-header (featureSelected)="onNavigate($event)"></app-staff-header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
- 
-      <app-staff *ngIf="loadedFeature === 'staff'"></app-staff>      
+
+
+    <div class="col-md-8">
+      <app-staff-header (featureSelected)="onNavigate($event)"></app-staff-header>
+      
+      <!-- <app-staff *ngIf="loadedFeature === 'staff'"></app-staff>      
       <app-schedules *ngIf="loadedFeature === 'schedules'"></app-schedules>
       <app-empregister *ngIf="loadedFeature === 'empregister'"></app-empregister>
       <app-staff-attendance *ngIf="loadedFeature === 'staff-attendance'"></app-staff-attendance>
       <app-login *ngIf="loadedFeature === 'login'"></app-login>  
-      <!-- <app-reg *ngIf="loadedFeature === 'reg'"></app-reg>       -->
-
+      <app-reg *ngIf="loadedFeature === 'reg'"></app-reg>       -->
+      <router-outlet></router-outlet>
    </div>
-  </div>
-</div>

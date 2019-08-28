@@ -1,0 +1,22 @@
+
+// <div class="container">
+// <h2>Rounded Corners</h2>
+// <p>The .rounded class adds rounded corners to an image:</p>            
+// <img src="CNG1.jpg" class="rounded-circle" alt="Cinque Terre" width="300" height="300"> 
+// </div>
+
+h1{
+    font-family:forte;color:#ffffff;
+    text-shadow:0px 0px 4px #000000;
+    background:#000000;
+    padding:10px;
+    position:  center;
+  }
+
+  .ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
