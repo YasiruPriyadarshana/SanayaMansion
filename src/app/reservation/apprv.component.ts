@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './apprv.component.html',
   styleUrls: ['./apprv.component.css']
 })
-export class AppComponent {
+export class ResAppComponent {
   loadedFeature='room';
 
 

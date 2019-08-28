@@ -93,6 +93,7 @@ import { AppEventComponent } from './event/appev.component';
 import { EventHeaderComponent } from './event/header/header.component';
 import { FinanceAppComponent } from './Finance/appfn.component';
 import { FHeaderComponent } from './Finance/header/header.component';
+import { ResAppComponent } from './reservation/apprv.component';
 
 
 
@@ -184,6 +185,7 @@ import { FHeaderComponent } from './Finance/header/header.component';
     
     
     //reservation
+    ResAppComponent,
     RoomComponent,
     RBookingDetailsComponent,
     HallComponent,

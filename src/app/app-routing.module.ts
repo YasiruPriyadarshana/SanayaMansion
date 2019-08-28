@@ -28,7 +28,7 @@ import { SchedulesComponent } from './staffmanager/schedules/schedules.component
 import { StaffAttendanceComponent } from './staffmanager/staff-attendance/staff-attendance.component';
 import { EmpregisterComponent } from './staffmanager/empregister/empregister.component';
 import { StaffComponent } from './staffmanager/staff/staff.component';
-import { RoomComponent } from './reservation/room/room.component';
+
 import { CRoomsComponent } from './customer/rooms/rooms.component';
 import { AppEventComponent } from './event/appev.component';
 import { WeddingsComponent } from './event/weddings/weddings.component';
@@ -38,6 +38,11 @@ import { AdvertisementsComponent } from './event/advertisements/advertisements.c
 import { FinanceAppComponent } from './Finance/appfn.component';
 import { PayrollComponent } from './Finance/payroll/payroll.component';
 import { FHomeComponent } from './Finance/home/home.component';
+import { ResAppComponent } from './reservation/apprv.component';
+import { RoomComponent } from './reservation/room/room.component';
+import { HallComponent } from './reservation/hall/hall.component';
+import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r-booking-details.component';
+import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
 
 
 const routes: Routes = [
@@ -99,6 +104,15 @@ const routes: Routes = [
     { path:'events',component: AdvertisementsComponent },
     { path:'login',component: EventCalendarComponent },
     { path:'daily',component: AdvertisementsComponent }
+    
+  ] },
+
+
+  {path: 'reservation', component: ResAppComponent, children: [
+    { path:'room',component: RoomComponent },
+    { path:'hall',component: HallComponent },
+    { path:'roomdetails',component: RBookingDetailsComponent },
+    { path:'halldetails',component: HBookingDetailsComponent }
     
   ] },
 
