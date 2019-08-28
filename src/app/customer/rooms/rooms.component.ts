@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.css']
 })
-export class RoomsComponent {
+export class CRoomsComponent {
   @ViewChild('f',{static:false}) signupForm: NgForm;
   defaultQuestion='FullBoard';
 

@@ -48,7 +48,7 @@ import { ShoppingListComponent } from './catering/shopping-list/shopping-list.co
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
 import { StoreItemsComponent } from './stores/store-items/store-items.component';
 import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
-import { RoomsComponent } from './customer/rooms/rooms.component';
+
 import { WeddingsComponent } from './event/weddings/weddings.component';
 import { OtherComponent } from './event/other/other.component';
 import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
@@ -79,6 +79,16 @@ import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-lis
 import { RoomService } from './propertyMangement/rooms/room.service';
 import { ShoppingListService } from './catering/shopping-list/shopping-list.service';
 import { NgModule } from '@angular/core';
+import { RoomsComponent } from './propertyMangement/rooms/rooms.component';
+import { CRoomsComponent } from './customer/rooms/rooms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+
 
 
 @NgModule({
@@ -111,8 +121,8 @@ import { NgModule } from '@angular/core';
     CateringItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    RoomsComponent,
-    
+    CRoomsComponent,
+   
     AppComponent,
     HeaderComponent,
 
@@ -134,6 +144,7 @@ import { NgModule } from '@angular/core';
     VehicleEditComponent,
     RoomItemComponent,
     SubHeaderComponent,
+    RoomsComponent,
    
     //Staff Mangement
     AppstaffComponent,
@@ -188,12 +199,22 @@ import { NgModule } from '@angular/core';
     LoginComponent,
     DailyReportComponent,
     EditDailyReportComponent,
+
+
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
     
     
   ],
