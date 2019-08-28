@@ -1,0 +1,181 @@
+<html>
+    <body>
+            
+                   
+                            <h1>WEDDINGS</h1>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-info" type="submit">Search</button>
+        </form>
+                   
+
+<br>
+
+<form  (ngSubmit)="onSubmit(wedding)" #weddings="ngForm" class="form-horizontal">
+
+    <div class="form-group">
+        <label for="inputDate" class="col-sm-2 control-label">Date</label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" id="inputDate"  name="dt" [(ngModel)]="event1.dt" 
+          #dt="ngModel"
+          (change)="logChange(dt)"
+          minlength="3" 
+          required>
+
+          <div class="alert alert-danger" *ngIf="!dt.valid">
+            <span *ngIf="dt.errors.required">Date is Required</span><br>
+          </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label for="inputPoruwa" class="col-sm-2 control-label">Time to Poruwa Ceremony</label>
+      <div class="col-sm-10">
+        <input type="time" class="form-control" id="inputPoruwa"  name="Poruwa" [(ngModel)]="event1.Poruwa" 
+        #Poruwa="ngModel"
+          (change)="logChange(dt)"
+          minlength="3" 
+          required>
+
+          <div class="alert alert-danger" *ngIf="!Poruwa.valid">
+            <span *ngIf="Poruwa.errors.required">Time is Required</span><br>
+          </div>
+
+    </div>
+</div>
+
+<br>
+
+    <div class="form-group">
+      <label for="inputWDrink" class="col-sm-2 control-label">Time for Welcome Drink</label>
+      <div class="col-sm-10">
+        <input type="time" class="form-control" id="inputWDrink"  name="WDrink" [(ngModel)]="event1.WDrink" 
+        #WDrink="ngModel"
+          (change)="logChange(WDrink)"
+          minlength="3" 
+          required>
+
+          <div class="alert alert-danger" *ngIf="!WDrink.valid">
+            <span *ngIf="WDrink.errors.required">Time is Required</span><br>
+            <!-- <span *ngIf="WDrink.errors.minlength">Name must have min 3 characters</span> -->
+          </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+            <label for="inputEDrink" class="col-sm-2 control-label">Time for Evening Drink</label>
+            <div class="col-sm-10">
+            <input type="time" class="form-control" id="inputEDrink"  name="EDrink" [(ngModel)]="event1.EDrink" 
+            #EDrink="ngModel"
+          (change)="logChange(EDrink)"
+          minlength="3" 
+          required>
+
+          <div class="alert alert-danger" *ngIf="!EDrink.valid">
+            <span *ngIf="EDrink.errors.required">Time is Required</span><br>
+            <!-- <span *ngIf="WDrink.errors.minlength">Name must have min 3 characters</span> -->
+          </div>
+         </div>
+     </div>
+
+     <br>
+
+     <div class="form-group">
+            <label for="inputFloral" class="col-sm-2 control-label">Name of the Floral Arrangement</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputFloral" placeholder="Florist" name="Floral" [(ngModel)]="event1.Floral" 
+            #Floral="ngModel"
+            (change)="logChange(Floral)"
+            minlength="3" 
+            required>
+
+            <div class="alert alert-danger" *ngIf="!Floral.valid">
+              <span *ngIf="Floral.errors.required">Name is Required</span><br>
+              <span *ngIf="Floral.errors.minlength">Name must have min 3 characters</span>
+
+            </div>
+         </div>
+     </div>
+
+     <br>
+
+     <div class="form-group">
+            <label for="inputPhoto" class="col-sm-2 control-label">Name of the Photographer</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputPhoto" placeholder="Photographer" name="Pgrapher" [(ngModel)]="event1.Pgrapher" 
+            #Pgrapher="ngModel"
+            (change)="logChange(Pgrapher)"
+            minlength="3" 
+            required>
+
+            <div class="alert alert-danger" *ngIf="!Pgrapher.valid">
+              <span *ngIf="Pgrapher.errors.required">Name is Required</span><br>
+              <span *ngIf="Pgrapher.errors.minlength">Name must have min 3 characters</span>
+            </div>
+
+         </div>
+     </div>
+
+     <br>
+
+     <div class="form-group">
+        <label for="inputLight" class="col-sm-2 control-label">Type of the Light System</label>
+        <div class="col-sm-10">
+              
+               
+        <input type="text" class="form-control" id="inputLight" placeholder="Lights" name="lights" [(ngModel)]="event1.lights" 
+        #lights="ngModel"
+            (change)="logChange(lights)"
+            minlength="3" 
+            required>
+
+            <div class="alert alert-danger" *ngIf="!lights.valid">
+              <span *ngIf="lights.errors.required">Type is Required</span><br>
+              <!-- <span *ngIf="lights.errors.minlength">Name must have min 3 characters</span> -->
+
+            </div>
+     </div>
+     <!-- <div ng-app="myApp" ng-controller="myCtrl">
+
+        <select ng-model="selectedName" ng-options="x for x in names">
+        </select>
+        
+        </div>
+        
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.names = ["Emil", "Tobias", "Linus"];
+        });
+        </script> -->
+ </div>
+    
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-warning">CONFIRM</button>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-warning">UPDATE</button>
+            </div>
+         </div>
+
+
+         <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-warning">CANCEL</button>
+            </div>
+         </div>
+  </form>
+
+  {{x.className}}
+
+  

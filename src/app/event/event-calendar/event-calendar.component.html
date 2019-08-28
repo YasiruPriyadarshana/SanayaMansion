@@ -1,0 +1,169 @@
+ <h1>EVENT CALENDAR</h1>
+
+<div class="container">
+<hr>
+<button type="button" class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#myModal">Add New</button>
+
+
+
+<table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Event ID</th>
+        <th>Event Type</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>01/01/2020</td>
+        <td>E001</td>
+        <td>Wedding</td>
+
+        <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+     </tr>
+
+     <tr>
+        <td>02/01/2020</td>
+        <td>E002</td>
+        <td>Birthday Party</td>
+
+        <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+     </tr>
+
+     <tr>
+        <td>03/01/2020</td>
+        <td>E003</td>
+        <td>Office-Meeting</td>
+
+        <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+     </tr>
+
+     <tr>
+        <td>04/01/2020</td>
+        <td>E004</td>
+        <td>Get-Together</td>
+
+        <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+     </tr>
+
+     <tr>
+        <td>05/01/2020</td>
+        <td>E005</td>
+        <td>Wedding</td>
+
+        <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+     </tr>
+
+     <tr>
+        <td>06/01/2020</td>
+        <td>E006</td>
+        <td>Get-Together</td>
+
+        <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+     </tr>
+
+     
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add new events here.</h4>
+        </div>
+        <div class="modal-body">
+
+
+            <form class="form-horizontal" >
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Date:</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" >
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Event ID:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Event Type:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" >
+                    </div>
+                  </div>
+
+                
+               
+              <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Save</button>
+                </div>
+              </div>
+            </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
