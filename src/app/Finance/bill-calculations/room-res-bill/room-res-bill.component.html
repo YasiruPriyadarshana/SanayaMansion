@@ -1,0 +1,43 @@
+<div class="row">
+                <div class="col-xs-10">
+                        
+                        <hr>
+                        <br><br>
+                        <hr>
+                        <h3>Current Event Booking</h3>
+                            <div class="container">
+                                    <table class="table table-trapped">
+                            
+                                            <thead>
+                                                <tr>
+                                                    <th>Booking ID</th>
+                                                    <th>Menu Type</th>
+                                                    <th>No of Plates</th>
+                                                    <th>Extra Plates</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                    
+                                            <tbody>
+                                                <tr *ngFor="let data of resBill">
+                                                    <td>{{data.bookId}}</td>
+                                                    <td>{{data.mType}}</td>
+                                                    <td>{{data.noOfPl}}</td>
+                                                    <td>{{data.extra}}</td>
+                                                    <td>{{data.amount}}</td>
+                                                    <td><button class="btn btn-danger">Delete</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                        
+                                    <app-room-res-bill-edit
+                                    (resAdded)="onResAdded($event)"></app-room-res-bill-edit>        
+                                
+                                
+                                
+                        </div>
+                    </div>
+                    
+                    
+                    

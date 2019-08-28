@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-xs-12">
+
+            <div class="search">
+                    <h5>Enter Emplyee ID:</h5>  
+                    <input type="text" placeholder="Search..">
+                    <button class="btn btn-warning">View Details</button>
+            </div><br><br>
+            <hr><h2> Display Salary Sheet</h2>
+
+        <form>
+            <div class="row">
+                    <div class="col-sm-5 form-group">
+                      <label for="empId">Employee ID</label>
+                      <input type="text" id="empId" class="form-control" #empId>
+                    </div>
+                    <div class="col-sm-7 form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" #empname>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" class="form-control" #des>
+                    </div>
+            </div> 
+            <form (ngSubmit)="onSubmi()" #ngForm>
+            <div class="row">
+                    <div class="col-sm-7 form-group">
+                            <label for="basicsalary">Basic Salary</label>
+                            <input type="text" id="basicsalary" class="form-control" #sal ngModel name="basicsalary"
+                                        required>
+                    </div> 
+                    <div class="col-sm-7">
+                            <button class="btn btn-warning" type="button">Edit</button>
+                            <button class="btn btn-success" type="submit">Save</button>
+                    </div>
+                  
+            </div> 
+        </form> 
+            <br><br>
+            
+                    
+            
+            <div class="row">
+                    <div class="col-sm-5 form-group">
+                      <label for="epf">EPF</label>
+                      <input type="text" id="epf" class="form-control" #eepf>
+                    </div>
+                    <div class="col-sm-5 form-group">
+                            <label for="otAmount">OT Amount</label>
+                            <input type="text" id="otAmount" class="form-control"#amu>
+                    </div>
+                    <div class="col-sm-7 form-group">
+                            <label for="allowance">Allowance</label>
+                            <input type="text" id="allowance" class="form-control" #allo>
+                    </div>
+                    
+            </div> 
+            <br>
+            
+            <div class="row">
+                    <div class="col-sm-10 form-group">
+                      <label for="netSalary">Net Salary</label>
+                      <input type="text" id="netSalary" class="form-control" #netsal>
+                    </div>
+            </div> 
+
+
+
+            
+            <div class="row">
+                    <div class="col-sm-12 ">
+                        <button class="btn btn-success" type="submit" (click)="onAddItem()">Add</button>
+                        <!-- <button class="btn btn-danger" type="button">Delete</button>-->
+                        <button class="btn btn-primary" type="button">Print</button> 
+                    </div>
+            </div>
+                    
+        </form>
+    </div>
+</div>
+
