@@ -29,6 +29,12 @@ import { StaffAttendanceComponent } from './staffmanager/staff-attendance/staff-
 import { EmpregisterComponent } from './staffmanager/empregister/empregister.component';
 import { StaffComponent } from './staffmanager/staff/staff.component';
 import { RoomComponent } from './reservation/room/room.component';
+import { CRoomsComponent } from './customer/rooms/rooms.component';
+import { AppEventComponent } from './event/appev.component';
+import { WeddingsComponent } from './event/weddings/weddings.component';
+import { OtherComponent } from './event/other/other.component';
+import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
+import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
 
 
 const routes: Routes = [
@@ -46,19 +52,19 @@ const routes: Routes = [
     
   ]},
   { path: 'propertyManagement', component: PropAppComponent, children:[
-    { path:'rooms', component: RoomsComponent, children: [
-      { path:'',component: RoomStartComponent },
-      { path: 'new', component: RoomEditComponent},
-      { path: ':id', component: RoomDetailComponent},
-      { path: ':id/edit', component: RoomEditComponent}] },
+       { path:'rooms', component: RoomsComponent, children: [
+           { path:'',component: RoomStartComponent },
+           { path: 'new', component: RoomEditComponent},
+           { path: ':id', component: RoomDetailComponent},
+           { path: ':id/edit', component: RoomEditComponent}] },
  
-  { path:'halls', component: HallsComponent, children: [
-      { path:'',component: HallStartComponent },
-      { path: 'new', component: HallEditComponent},
-      { path: ':id', component: HallDetailComponent},
-      { path: ':id/edit', component: HallEditComponent}] },
+       { path:'halls', component: HallsComponent, children: [
+         { path:'',component: HallStartComponent },
+         { path: 'new', component: HallEditComponent},
+         { path: ':id', component: HallDetailComponent},
+         { path: ':id/edit', component: HallEditComponent}] },
 
-  { path:'vehicle-list', component: VehicleListComponent }
+      { path:'vehicle-list', component: VehicleListComponent }
   ]},
   
   { path: 'staff', component:AppstaffComponent, children: [
@@ -68,17 +74,17 @@ const routes: Routes = [
     { path:'staffcomponent',component: StaffComponent }
   ]},
   {path: 'customer', component: AppCusComponent, children: [
-    { path:'rooms',component: RoomsComponent },
+    { path:'rooms',component: CRoomsComponent },
     { path:'supplier',component: SupplierComponent },
     { path:'roomdetail',component: RoomDetailsComponent },
     { path:'supplierdetails',component: SupDetailComponent }
     
   ] },
-  {path: 'roomresv', component: RoomComponent, children: [
-    { path:'rooms',component: RoomsComponent },
-    { path:'supplier',component: SupplierComponent },
-    { path:'roomdetail',component: RoomDetailsComponent },
-    { path:'supplierdetails',component: SupDetailComponent }
+  {path: 'event', component: AppEventComponent, children: [
+    { path:'weddings',component: WeddingsComponent },
+    { path:'other',component: OtherComponent },
+    { path:'eventcalendar',component: EventCalendarComponent },
+    { path:'advertisements',component: AdvertisementsComponent }
     
   ] },
   

@@ -88,6 +88,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { DropdownDirective } from './propertyMangement/shared/dropdown.directive';
+import { AppEventComponent } from './event/appev.component';
+import { EventHeaderComponent } from './event/header/header.component';
 
 
 
@@ -129,22 +132,35 @@ import { MatListModule } from '@angular/material/list';
     
     
     //property Management
+    SubHeaderComponent,
+    PropAppComponent,
+    RoomsComponent,
+    RoomListComponent,
+    RoomDetailComponent,
+    RoomItemComponent,
     RoomStartComponent,
     RoomEditComponent,
-    RoomDetailComponent,
-    HallsComponent,
-    HallStartComponent,
-    HallEditComponent,
-    HallDetailComponent,
+
     VehicleListComponent,
-    PropAppComponent,
-    HallListComponent,
-    HallItemComponent,
-    RoomListComponent,
     VehicleEditComponent,
-    RoomItemComponent,
-    SubHeaderComponent,
-    RoomsComponent,
+    DropdownDirective,
+    
+    HallsComponent,
+    HallDetailComponent,
+    HallEditComponent,
+    HallListComponent,
+    HallStartComponent,
+    HallItemComponent,
+    
+    
+   
+   
+    
+    
+   
+    
+   
+    
    
     //Staff Mangement
     AppstaffComponent,
@@ -173,12 +189,12 @@ import { MatListModule } from '@angular/material/list';
     HeaderRComponent,
     
     //event
-    HeaderComponent,
+    EventHeaderComponent,
     WeddingsComponent,
     OtherComponent,
     EventCalendarComponent,
     AdvertisementsComponent,
-    
+    AppEventComponent,
     
 
 

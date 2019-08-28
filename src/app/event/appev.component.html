@@ -1,10 +1,7 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<ev-app-header (featureSelected)="onNavigate($event)"></ev-app-header>
 <div class="container">
-  <app-weddings *ngIf="loadedFeature === 'wedding'"></app-weddings>
-  <app-other *ngIf="loadedFeature === 'other'"></app-other>
-  <app-event-calendar *ngIf="loadedFeature === 'event-calendar'"></app-event-calendar>
-  <app-advertisements *ngIf="loadedFeature === 'advertisements'"></app-advertisements>
+  <router-outlet></router-outlet> 
 
 </div>
 
-<router-outlet></router-outlet> 
+
