@@ -13,7 +13,7 @@ export class CateringService{
     
     private catering:Catering[] = [
         new Catering('Hotel Menu','','https://media-cdn.tripadvisor.com/media/photo-s/0c/15/75/e8/buffet-des-salades.jpg',[new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
-        new Catering('Resturent Menu','','https://s3-eu-central-1.amazonaws.com/lfsa-prod-01/Article/4272/original.jpg?1498629794',[new Ingredient('Buns', 2), new Ingredient('Meat', 1)])
+        new Catering('Restaurant Menu','','https://s3-eu-central-1.amazonaws.com/lfsa-prod-01/Article/4272/original.jpg?1498629794',[new Ingredient('Buns', 2), new Ingredient('Meat', 1)])
         ];
 
     

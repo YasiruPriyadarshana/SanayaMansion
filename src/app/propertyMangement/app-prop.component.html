@@ -1,9 +1,11 @@
-<app-sub-header (featureSelected)="onNavigate($event)"></app-sub-header>
 
-<div class="container" class="background" >
-  <div class="row">
-    <div class="col-md-12" >
+
+<div class="background" >
+
+ 
+    <div class="col-md-9" >
+        <app-sub-header (featureSelected)="onNavigate($event)"></app-sub-header>
       <router-outlet></router-outlet>
-    </div>
+    
   </div>
 </div>
