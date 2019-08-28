@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 
-import { Record } from 'src/app/daily-report/records.model';
+import { Record } from '../../daily-report/records.model';
 
 @Component({
   selector: 'app-edit-daily-report',
