@@ -68,7 +68,7 @@ import { EditSalaryDetailsComponent } from './Finance/payroll/edit-salary-detail
 import { EventBillEditComponent } from './Finance/bill-calculations/event-bill/event-bill-edit/event-bill-edit.component';
 import { RoomResBillEditComponent } from './Finance/bill-calculations2/room-res-bill/room-res-bill-edit/room-res-bill-edit.component';
 import { BillCalculations2Component } from './Finance/bill-calculations2/bill-calculations2.component';
-import { HomeComponent } from './Finance/home/home.component';
+import { FHomeComponent } from './Finance/home/home.component';
 import { DailyReportComponent } from './Finance/daily-report/daily-report.component';
 import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-report/edit-daily-report.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -91,6 +91,8 @@ import { MatListModule } from '@angular/material/list';
 import { DropdownDirective } from './propertyMangement/shared/dropdown.directive';
 import { AppEventComponent } from './event/appev.component';
 import { EventHeaderComponent } from './event/header/header.component';
+import { FinanceAppComponent } from './Finance/appfn.component';
+import { FHeaderComponent } from './Finance/header/header.component';
 
 
 
@@ -200,6 +202,8 @@ import { EventHeaderComponent } from './event/header/header.component';
 
     
     //Finance
+    FinanceAppComponent,
+    FHomeComponent,
     HeaderComponent,
     PayrollComponent,
     SalaryDetailsComponent,
@@ -211,11 +215,10 @@ import { EventHeaderComponent } from './event/header/header.component';
     EventBillEditComponent,
     RoomResBillEditComponent,
     BillCalculations2Component,
-    HomeComponent,
     LoginComponent,
     DailyReportComponent,
     EditDailyReportComponent,
-
+    FHeaderComponent
 
     
 

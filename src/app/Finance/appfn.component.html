@@ -1,20 +1,16 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-12">
+<app-f-header (featureSelected)="onNavigate($event)"></app-f-header>
+ 
 
-      <app-home *ngIf="loadedFeature === 'home'"></app-home>
+      <!-- <app-f-home *ngIf="loadedFeature === 'home'"></app-f-home>
       <app-payroll *ngIf="loadedFeature === 'pay'"></app-payroll>
       <app-bill-calculations *ngIf="loadedFeature === 'reservations'"></app-bill-calculations>
       <app-bill-calculations2 *ngIf="loadedFeature === 'events'"></app-bill-calculations2>
 
       <app-login *ngIf="loadedFeature === 'login'"></app-login>
       <app-daily-report *ngIf="loadedFeature === 'daily'"></app-daily-report>
+ -->
 
 
-
-      
+      <router-outlet></router-outlet>
     
-    </div>
-  </div>
-</div>
+    

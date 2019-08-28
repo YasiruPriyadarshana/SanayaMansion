@@ -35,6 +35,9 @@ import { WeddingsComponent } from './event/weddings/weddings.component';
 import { OtherComponent } from './event/other/other.component';
 import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
 import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
+import { FinanceAppComponent } from './Finance/appfn.component';
+import { PayrollComponent } from './Finance/payroll/payroll.component';
+import { FHomeComponent } from './Finance/home/home.component';
 
 
 const routes: Routes = [
@@ -88,6 +91,16 @@ const routes: Routes = [
     
   ] },
   
+
+  {path: 'Fhome', component: FinanceAppComponent, children: [
+    { path:'home',component: FHomeComponent },
+    { path:'Payment',component: PayrollComponent },
+    { path:'reservations',component: EventCalendarComponent },
+    { path:'events',component: AdvertisementsComponent },
+    { path:'login',component: EventCalendarComponent },
+    { path:'daily',component: AdvertisementsComponent }
+    
+  ] },
 
   {path: 'shopping-list',component: ShoppingListComponent}
 ];
