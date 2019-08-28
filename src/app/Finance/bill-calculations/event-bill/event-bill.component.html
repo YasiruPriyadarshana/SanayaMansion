@@ -1,0 +1,45 @@
+<div class="row">
+        <div class="col-xs-10">
+                
+                <hr>
+                <br><br>
+                <hr>
+                <h3>Current Room Reservations</h3>
+                    <div class="container">
+                            <table class="table table-trapped">
+                    
+                                    <thead>
+                                        <tr>
+                                            <th>Booking ID</th>
+                                            <th>Room Type</th>
+                                            <th>Board Type</th>
+                                            <th>No of Days</th>
+                                            <th>No of Rooms</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                        <tr *ngFor="let data of eventBill">
+                                            <td>{{data.bookId}}</td>
+                                            <td>{{data.rType}}</td>
+                                            <td>{{data.bType}}</td>
+                                            <td>{{data.noOfDay}}</td>
+                                            <td>{{data.noOfRooms}}</td>
+                                            <td>{{data.amount}}</td>
+                                            <td><button class="btn btn-danger">Delete</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                                
+                            <app-event-bill-edit
+                            (eventAdded)="onEventAdded($event)"></app-event-bill-edit>        
+                        
+                        
+                        
+                </div>
+            </div>
+            
+            
+            
