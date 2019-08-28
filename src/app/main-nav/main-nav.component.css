@@ -2,8 +2,10 @@
   height: 750px;
 }
 
-.sidenav {
-  width: 200px;
+.mat-sidenav-content {
+  width: 288x;
 }
-
+.mat-toolbar{
+  width: 288x;
+}
 
