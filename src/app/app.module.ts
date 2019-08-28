@@ -71,12 +71,6 @@ import { OtherComponent } from './event/other/other.component';
 import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
 import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
 import { WeddingsComponent } from './event/weddings/weddings.component';
-<<<<<<< HEAD
-import { RoomComponent } from './reservation/room/room.component';
-import { HallComponent } from './reservation/hall/hall.component';
-import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
-import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r-booking-details.component';
-=======
 import { PayrollComponent } from './Finance/payroll/payroll.component';
 import { SalaryDetailsComponent } from './Finance/payroll/salary-details/salary-details.component';
 import { BillCalculationsComponent } from './Finance/bill-calculations/bill-calculations.component';
@@ -90,7 +84,6 @@ import { BillCalculations2Component } from './Finance/bill-calculations2/bill-ca
 import { HomeComponent } from './Finance/home/home.component';
 import { DailyReportComponent } from './Finance/daily-report/daily-report.component';
 import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-report/edit-daily-report.component';
->>>>>>> 2f1f3053333bb2b3d5f1e131bdcdcf6ebd3aefcd
 
 @NgModule({
   declarations: [
@@ -157,14 +150,6 @@ import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-repo
     AdvertisementsComponent,
 
 
-<<<<<<< HEAD
-    RoomComponent,
-    HallComponent,
-    RBookingDetailsComponent,
-    HBookingDetailsComponent
-
-
-=======
     HeaderComponent,
     PayrollComponent,
     SalaryDetailsComponent,
@@ -180,7 +165,6 @@ import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-repo
     LoginComponent,
     DailyReportComponent,
     EditDailyReportComponent,
->>>>>>> 2f1f3053333bb2b3d5f1e131bdcdcf6ebd3aefcd
   ],
   imports: [
     BrowserModule,
