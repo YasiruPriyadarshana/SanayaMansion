@@ -28,6 +28,7 @@ import { SchedulesComponent } from './staffmanager/schedules/schedules.component
 import { StaffAttendanceComponent } from './staffmanager/staff-attendance/staff-attendance.component';
 import { EmpregisterComponent } from './staffmanager/empregister/empregister.component';
 import { StaffComponent } from './staffmanager/staff/staff.component';
+import { RoomComponent } from './reservation/room/room.component';
 
 
 const routes: Routes = [
@@ -73,6 +74,14 @@ const routes: Routes = [
     { path:'supplierdetails',component: SupDetailComponent }
     
   ] },
+  {path: 'roomresv', component: RoomComponent, children: [
+    { path:'rooms',component: RoomsComponent },
+    { path:'supplier',component: SupplierComponent },
+    { path:'roomdetail',component: RoomDetailsComponent },
+    { path:'supplierdetails',component: SupDetailComponent }
+    
+  ] },
+  
 
   {path: 'shopping-list',component: ShoppingListComponent}
 ];

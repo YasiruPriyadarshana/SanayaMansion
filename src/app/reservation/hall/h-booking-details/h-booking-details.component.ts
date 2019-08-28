@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild, ElementRef,Output,EventEmitter } from '@angular/core';
-import{booking} from 'src/app/shared/hall.model';
+import{booking} from '../../shared/hall.model';
 @Component({
   selector: 'app-h-booking-details',
   templateUrl: './h-booking-details.component.html',

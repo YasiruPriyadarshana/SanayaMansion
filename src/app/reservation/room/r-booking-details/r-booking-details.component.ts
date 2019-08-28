@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild,ElementRef, Output,EventEmitter } from '@angular/core';
-import { Rbooking } from 'src/app/nshared/room.model';
+import { Rbooking } from '../../nshared/room.model';
 
 @Component({
   selector: 'app-r-booking-details',

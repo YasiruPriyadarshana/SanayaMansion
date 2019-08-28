@@ -1,28 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
-import {FormsModule} from '@angular/forms';
 import { StoresComponent } from './stores/stores.component';
 import { CateringComponent } from './catering/catering.component';
 import { HeaderComponent } from './header/header.component';
 import { DropDownDirective } from './shared/dropdown.directive';
 import { SanayaHomeComponent } from './sanaya-home/sanaya-home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list'
-import { HallService } from './propertyMangement/halls/hall.service';
-import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-list.service';
-import { RoomService } from './propertyMangement/rooms/room.service';
-import { RoomsComponent } from './propertyMangement/rooms/rooms.component';
 import { SupplierComponent } from './customer/supplier/supplier.component';
 import { SupDetailComponent } from './customer/sup-detail/sup-detail.component';
 import { RoomDetailsComponent } from './customer/room-details/room-details.component';
@@ -62,46 +44,81 @@ import { CateringEditComponent } from './catering/hotel-menu/catering-edit/cater
 import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
 import { CateringListComponent } from './catering/hotel-menu/catering-list/catering-list.component';
 import { CateringItemComponent } from './catering/hotel-menu/catering-list/catering-item/catering-item.component';
-import { ShoppingListService } from './catering/shopping-list/shopping-list.service';
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
-import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
 import { StoreItemsComponent } from './stores/store-items/store-items.component';
-import { OtherComponent } from './event/other/other.component';
-import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
-import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
+import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
+import { RoomsComponent } from './customer/rooms/rooms.component';
 import { WeddingsComponent } from './event/weddings/weddings.component';
+import { OtherComponent } from './event/other/other.component';
+import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
+import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
+import { RoomComponent } from './reservation/room/room.component';
+import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r-booking-details.component';
+import { HallComponent } from './reservation/hall/hall.component';
+import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
+import { HeaderRComponent } from './reservation/header/header.component';
 import { PayrollComponent } from './Finance/payroll/payroll.component';
 import { SalaryDetailsComponent } from './Finance/payroll/salary-details/salary-details.component';
 import { BillCalculationsComponent } from './Finance/bill-calculations/bill-calculations.component';
 import { EventBillComponent } from './Finance/bill-calculations/event-bill/event-bill.component';
 import { RoomResBillComponent } from './Finance/bill-calculations/room-res-bill/room-res-bill.component';
-import { EditSalaryDetailsComponent } from './Finance/payroll/edit-salary-details/edit-salary-details.component';
 import { ViewDetailsComponent } from './Finance/payroll/salary-details/view-details/view-details.component';
+import { EditSalaryDetailsComponent } from './Finance/payroll/edit-salary-details/edit-salary-details.component';
 import { EventBillEditComponent } from './Finance/bill-calculations/event-bill/event-bill-edit/event-bill-edit.component';
-import { RoomResBillEditComponent } from './Finance/bill-calculations/room-res-bill/room-res-bill-edit/room-res-bill-edit.component';
+import { RoomResBillEditComponent } from './Finance/bill-calculations2/room-res-bill/room-res-bill-edit/room-res-bill-edit.component';
 import { BillCalculations2Component } from './Finance/bill-calculations2/bill-calculations2.component';
 import { HomeComponent } from './Finance/home/home.component';
 import { DailyReportComponent } from './Finance/daily-report/daily-report.component';
 import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-report/edit-daily-report.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HallService } from './propertyMangement/halls/hall.service';
+import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-list.service';
+import { RoomService } from './propertyMangement/rooms/room.service';
+import { ShoppingListService } from './catering/shopping-list/shopping-list.service';
+import { NgModule } from '@angular/core';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoresComponent,
-    CateringComponent,
     HeaderComponent,
     DropDownDirective,
     SanayaHomeComponent,
     MainNavComponent,
-    AppComponent,
-    HeaderComponent,
-    RoomsComponent,
+    //stores
+    StoresComponent,
+    StoreItemsComponent,
+    DecorationComponent,
+
+    //catering
+    CateringComponent,
+    hotelCateringComponent,
+    CateringEditComponent,
+    CateringDetailComponent,
+
+    //customer
     SupplierComponent,
     SupDetailComponent,
     RoomDetailsComponent,
     DisplaySComponent,
     DisplayRComponent,
+    AppCusComponent,
+    CusHeaderComponent,
+    CateringListComponent,
+    CateringItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    RoomsComponent,
+    
+    AppComponent,
+    HeaderComponent,
+
+    
+    
+    //property Management
     RoomStartComponent,
     RoomEditComponent,
     RoomDetailComponent,
@@ -111,6 +128,14 @@ import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-repo
     HallDetailComponent,
     VehicleListComponent,
     PropAppComponent,
+    HallListComponent,
+    HallItemComponent,
+    RoomListComponent,
+    VehicleEditComponent,
+    RoomItemComponent,
+    SubHeaderComponent,
+   
+    //Staff Mangement
     AppstaffComponent,
     SchedulesComponent,
     ShedulesEditComponent,
@@ -122,34 +147,32 @@ import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-repo
     AttendanceComponent,
     EmployeeComponent,
     MemberComponent,
-    HallListComponent,
-    HallItemComponent,
-    RoomListComponent,
-    VehicleEditComponent,
-    RoomItemComponent,
     StaffHeaderComponent,
-    AppCusComponent,
-    CusHeaderComponent,
-    DecorationComponent,
-    hotelCateringComponent,
-    CateringEditComponent,
-    CateringDetailComponent,
-    CateringListComponent,
-    CateringItemComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    SubHeaderComponent,
-    StoreItemsComponent,
     
-
-
+    
+    
+    
+    
+    
+    //reservation
+    RoomComponent,
+    RBookingDetailsComponent,
+    HallComponent,
+    HBookingDetailsComponent,
+    HeaderRComponent,
+    
+    //event
     HeaderComponent,
     WeddingsComponent,
     OtherComponent,
     EventCalendarComponent,
     AdvertisementsComponent,
+    
+    
 
 
+    
+    //Finance
     HeaderComponent,
     PayrollComponent,
     SalaryDetailsComponent,
@@ -170,13 +193,7 @@ import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-repo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
+    
     
     
   ],
