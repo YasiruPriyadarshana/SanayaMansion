@@ -1,0 +1,12 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+   <div class="row">
+       <div class="col-md-12">
+          <app-room *ngIf="loadedFeature === 'room'"></app-room> 
+          <app-hall *ngIf="loadedFeature === 'hall'"></app-hall> 
+          <app-r-booking-details *ngIf="loadedFeature === 'r-booking-details'"></app-r-booking-details> 
+          <app-h-booking-details *ngIf="loadedFeature === 'h-booking-details'"></app-h-booking-details> 
+
+       </div>
+   </div> 
+</div>

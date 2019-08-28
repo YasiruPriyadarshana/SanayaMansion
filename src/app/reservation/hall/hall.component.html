@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-xs-10">
+        
+
+        <app-h-booking-details
+        (bookingAdded)="onBookingAdded($event)"></app-h-booking-details>
+  
+<hr>
+<h2>booking details</h2>
+<div class="container">
+    <table class="table table-trapped">
+
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>NIC</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>HallType</th>
+                    <th>BookingDate</th>
+                    <th>payAmmount</th>
+                    <th>Update/Delete</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr *ngFor="let booking of wbooking">
+                    <td>{{booking.fname}}</td>
+                    <td>{{booking.lname}}</td>
+                    <td>{{booking.nic}}</td>
+                    <td>{{booking.address}}</td>
+                    <td>{{booking.telephone}}</td>
+                    <td>{{booking.email}}</td>
+                    <td>{{booking.hallType}}</td>
+                    <td>{{booking.purpose}}</td>
+                    <td>{{booking.amount}}</td>
+                 
+                    <td>{{booking.bookingDate}}</td>
+
+                    <td><button class="btn btn-success">Update</button>
+                        <button class="btn btn-danger">Delete</button></td>
+                                   </tr>
+            </tbody>
+        </table>
+    </div>
+        
+  
