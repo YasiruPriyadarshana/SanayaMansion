@@ -67,6 +67,10 @@ import { ShoppingListComponent } from './catering/shopping-list/shopping-list.co
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
 import { SubHeaderComponent } from './propertyMangement/sub-header/sub-header.component';
 import { StoreItemsComponent } from './stores/store-items/store-items.component';
+import { OtherComponent } from './event/other/other.component';
+import { AdvertisementsComponent } from './event/advertisements/advertisements.component';
+import { EventCalendarComponent } from './event/event-calendar/event-calendar.component';
+import { WeddingsComponent } from './event/weddings/weddings.component';
 
 @NgModule({
   declarations: [
@@ -122,9 +126,15 @@ import { StoreItemsComponent } from './stores/store-items/store-items.component'
     ShoppingListComponent,
     ShoppingEditComponent,
     SubHeaderComponent,
-    StoreItemsComponent
+    StoreItemsComponent,
     
 
+
+    HeaderComponent,
+    WeddingsComponent,
+    OtherComponent,
+    EventCalendarComponent,
+    AdvertisementsComponent
   ],
   imports: [
     BrowserModule,
