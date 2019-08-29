@@ -1,0 +1,17 @@
+<div>
+    
+    <button (click)="openModal('custom-modal-1')" class="btn btn-success pull-right">Add new Decoration</button>
+    
+    <button (click)="openModal('custom-modal-2')" class="btn btn-success ">Add new Decoration</button>
+</div>
+
+<jw-modal id="custom-modal-1">
+    <h1>A Custom Modal!</h1>
+    <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+    <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
+
+<jw-modal id="custom-modal-2">
+    <h1 style="height:1000px">A Tall Custom Modal!</h1>
+    <button (click)="closeModal('custom-modal-2');">Close</button>
+</jw-modal>

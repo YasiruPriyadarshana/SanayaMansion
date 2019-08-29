@@ -84,7 +84,7 @@ import { CRoomsComponent } from './customer/rooms/rooms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
+
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -95,6 +95,22 @@ import { FinanceAppComponent } from './Finance/appfn.component';
 import { FHeaderComponent } from './Finance/header/header.component';
 import { ResAppComponent } from './reservation/apprv.component';
 
+import { MAT_DIALOG_DEFAULT_OPTIONS, } from '@angular/material/dialog';
+
+
+
+import {
+  MatButtonModule,
+  MatCommonModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+} from '@angular/material';
+import { PopupComponent } from './stores/popup';
+import { ModalModule } from './stores/_modal/modal.module';
+
+
+
 
 
 @NgModule({
@@ -104,6 +120,9 @@ import { ResAppComponent } from './reservation/apprv.component';
     DropDownDirective,
     SanayaHomeComponent,
     MainNavComponent,
+    PopupComponent,
+        
+    
     //stores
     StoresComponent,
     StoreItemsComponent,
@@ -220,8 +239,11 @@ import { ResAppComponent } from './reservation/apprv.component';
     LoginComponent,
     DailyReportComponent,
     EditDailyReportComponent,
-    FHeaderComponent
-
+    FHeaderComponent,
+    
+   
+    
+    
     
 
   ],
@@ -237,9 +259,19 @@ import { ResAppComponent } from './reservation/apprv.component';
     MatIconModule,
     MatListModule,
     
+    MatButtonModule,
+    MatCommonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    
+    
+    BrowserModule,
+        FormsModule,
+        ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService],
+  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
