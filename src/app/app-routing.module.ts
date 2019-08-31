@@ -44,6 +44,7 @@ import { HallComponent } from './reservation/hall/hall.component';
 import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r-booking-details.component';
 import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
 import { PopupComponent } from './stores/popup/popup.component';
+import { RequestComponent } from './stores/request/request.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'stores', component:StoresComponent, children: [
     { path: '' ,component: DecorationComponent},
     { path: 'storeItems',component: StoreItemsComponent},
+    { path: 'requested',component: RequestComponent},
     { path: 'pop', component: PopupComponent },
     
   ]},

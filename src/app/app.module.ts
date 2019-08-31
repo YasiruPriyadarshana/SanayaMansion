@@ -109,6 +109,7 @@ import {
 } from '@angular/material';
 import { PopupComponent } from './stores/popup';
 import { ModalModule } from './stores/modal/modal.module';
+import { RequestComponent } from './stores/request/request.component';
 
 
 
@@ -122,7 +123,7 @@ import { ModalModule } from './stores/modal/modal.module';
     SanayaHomeComponent,
     MainNavComponent,
     PopupComponent,
-    
+    RequestComponent,
     
     //stores
     StoresComponent,
