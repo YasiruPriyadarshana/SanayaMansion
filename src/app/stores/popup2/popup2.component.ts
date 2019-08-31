@@ -6,17 +6,16 @@ import {startWith, map} from 'rxjs/operators';
 
 
 @Component({
-    selector: 'app-popup',
-    templateUrl:  'popup.component.html',
-    styleUrls: ['./popup.component.css']
+    selector: 'app-popup2',
+    templateUrl:  'popup2.component.html',
+    styleUrls: ['./popup2.component.css']
   })
-export class PopupComponent implements OnInit {
+export class PopupComponent2 implements OnInit {
     registerForm: FormGroup;
     submitted = false;
     control = new FormControl();
-    control2 = new FormControl();
+    itemv: string[] = ['Paper', 'Flowers', 'balloons', 'banners'];
     
-    itemv: string[] = ['Chicken', 'Fish', 'Green beans', 'Mung bean'];
     
     filtereditemsv: Observable<string[]>;
     
@@ -24,14 +23,15 @@ export class PopupComponent implements OnInit {
     constructor(private modalService: ModalService,private formBuilder: FormBuilder) { }
 
     ngOnInit() {
-        this.filtereditemsv = this.control.valueChanges.pipe(
-            startWith(''),
-            map(value => this._filter(value))
-          );
+      this.filtereditemsv = this.control.valueChanges.pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
+      
           
           this.registerForm = this.formBuilder.group({
-              item: ['', Validators.required],
-              
+             
+              decorations: ['', Validators.required],
               quantity: ['', Validators.required],
               supplier: ['', Validators.required],
               price: ['', Validators.required],
@@ -60,10 +60,9 @@ onReset() {
     this.registerForm.reset();
 }
 private _filter(value: string): string[] {
-    const filterValue = this._normalizeValue(value);
-    return this.itemv.filter(itemvs => this._normalizeValue(itemvs).includes(filterValue));
-  }
-  
+  const filterValue = this._normalizeValue(value);
+  return this.itemv.filter(itemvs => this._normalizeValue(itemvs).includes(filterValue));
+}
   private _normalizeValue(value: string): string {
     return value.toLowerCase().replace(/\s/g, '');
   }

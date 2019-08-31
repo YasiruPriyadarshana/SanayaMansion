@@ -110,6 +110,7 @@ import {
 import { PopupComponent } from './stores/popup';
 import { ModalModule } from './stores/modal/modal.module';
 import { RequestComponent } from './stores/request/request.component';
+import { PopupComponent2 } from './stores/popup2';
 
 
 
@@ -122,15 +123,16 @@ import { RequestComponent } from './stores/request/request.component';
     DropDownDirective,
     SanayaHomeComponent,
     MainNavComponent,
-    PopupComponent,
+    
     RequestComponent,
     
     //stores
     StoresComponent,
     StoreItemsComponent,
     DecorationComponent,
+    PopupComponent2,
+    PopupComponent,
     
-
     //catering
     CateringComponent,
     hotelCateringComponent,

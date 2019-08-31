@@ -1,0 +1,21 @@
+.col{
+    width: 300px;
+    overflow: auto;
+}
+.fix{
+    margin-top: 20px;
+    margin-left: 0px;
+}
+.form{
+    margin-left: 50px;
+}
+
+.invalid-feedback {
+    
+  
+    color: #dc3545;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    border-color: #dc3545;
+    
+}
