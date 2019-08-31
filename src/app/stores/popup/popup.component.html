@@ -6,15 +6,96 @@
 </div>
 
 <jw-modal id="custom-modal-1" >
-    <div style="height:300px">
-    <h1>A Custom Modal!</h1>
-    <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
-    <button (click)="closeModal('custom-modal-1');">Close</button>
+    <div style="height:350px">
+            
+                    <h5 class="card-header">Add Decoration Items</h5>
+                    
+                        
+                
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
+                                    <div class="row">
+                                           
+                                    <div class="col-xs-5 form-group">
+                                            <label>Items</label><br>
+                                    <input type="text" placeholder="" formControlName="item" class="form-control" [formControl]="control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.item.errors }" />
+                                    <mat-autocomplete #auto="matAutocomplete">
+                                      <mat-option *ngFor="let itemv of filtereditemsv | async" [value]="itemv">
+                                        {{itemv}}
+                                      </mat-option>
+                                    </mat-autocomplete>
+                                    <div *ngIf="submitted && f.item.errors" class="invalid-feedback">
+                                            <div *ngIf="f.item.errors.required">item is required</div>       
+                                    </div>
+                                </div>
+                                 
+                
+                
+                        
+                            <div class="col-xs-5 form-group">
+                                <label>Quantity</label>
+                                <input type="number" formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" />
+                                <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+                                    <div *ngIf="f.quantity.errors.required">Quantity is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                    <div class="col-xs-5 form-group">
+                            <label>Supplier</label>
+                           
+                            <select   formControlName="supplier" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.supplier.errors }">
+                                    
+                                    <option >Vijaya</option>
+                                    <option >Kig deliver</option>
+                                    <option >SuperFast</option>
+                                </select>
+                    <div *ngIf="submitted && f.supplier.errors" class="invalid-feedback">
+                         <div *ngIf="f.supplier.errors.required">supplier is required</div>
+                    </div>
+                 </div>
+                
+                
+                
+               
+                <div class=" col-xs-5 form-group">
+                    <label>Price</label>
+                    <input type="price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required">Price is required</div>
+                    </div>
+                </div>
+                        </div>
+                        <div class="row">
+                <div class=" col-xs-5 form-group">
+                        <label>Request</label>
+                        <select formControlName="request" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.request.errors }">
+                            
+                            <option value="Mr">Cheff</option>
+                            <option value="Mrs">Staff member</option>
+                            <option value="Miss">Store keeper</option>
+                        </select>
+                        <div *ngIf="submitted && f.request.errors" class="invalid-feedback">
+                            <div *ngIf="f.request.errors.required">Request is required</div>
+                        </div>
+                    </div>
+                
+                </div>
+           <div class="row">
+                    <div class="fix ">
+                <div class="text-center">
+                <button class="btn btn-primary mr-1">Register</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                </div>
+                    </div>
+                </div>
+                        </form>
+                        
+              
     </div>
 </jw-modal>
 
 <jw-modal id="custom-modal-2" >
-    <div style="height:300px">
+    <div style="height:350px">
     <h1 >A Tall Custom Modal!</h1>
     <button (click)="closeModal('custom-modal-2');">Close</button>
     </div>

@@ -73,7 +73,7 @@ import { DailyReportComponent } from './Finance/daily-report/daily-report.compon
 import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-report/edit-daily-report.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HallService } from './propertyMangement/halls/hall.service';
 import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-list.service';
 import { RoomService } from './propertyMangement/rooms/room.service';
@@ -105,9 +105,10 @@ import {
   MatDialogModule,
   MatFormFieldModule,
   MatInputModule,
+  MatAutocompleteModule,
 } from '@angular/material';
 import { PopupComponent } from './stores/popup';
-import { ModalModule } from './stores/_modal/modal.module';
+import { ModalModule } from './stores/modal/modal.module';
 
 
 
@@ -121,12 +122,13 @@ import { ModalModule } from './stores/_modal/modal.module';
     SanayaHomeComponent,
     MainNavComponent,
     PopupComponent,
-        
+    
     
     //stores
     StoresComponent,
     StoreItemsComponent,
     DecorationComponent,
+    
 
     //catering
     CateringComponent,
@@ -264,7 +266,11 @@ import { ModalModule } from './stores/_modal/modal.module';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
     
     BrowserModule,
         FormsModule,
