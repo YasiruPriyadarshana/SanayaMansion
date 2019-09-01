@@ -17,14 +17,14 @@
                                            
                                     <div class="col-xs-5 form-group">
                                             <label>Items</label><br>
-                                    <input type="text" placeholder="" formControlName="item" class="form-control" [formControl]="control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.item.errors }" />
+                                    <input type="text" placeholder="" formControlName="decorations" class="form-control" [formControl]="control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.decorations.errors }" />
                                     <mat-autocomplete #auto="matAutocomplete">
                                             <mat-option *ngFor="let itemv of filtereditemsv | async" [value]="itemv">
                                               {{itemv}}
                                             </mat-option>
                                           </mat-autocomplete>
-                                          <div *ngIf="submitted && f.item.errors" class="invalid-feedback">
-                                                  <div *ngIf="f.item.errors.required">item is required</div>       
+                                          <div *ngIf="submitted && f.decorations.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.decorations.errors.required">item is required</div>       
                                           </div>
                                 </div>
                                  
@@ -79,6 +79,13 @@
                         </div>
                     </div>
                 
+                    <div class=" col-xs-5 form-group" >
+                        <label>Date Time</label>
+                           
+                            <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control">
+                            <owl-date-time #dt></owl-date-time>
+                        
+                </div>
                 </div>
            <div class="row">
                     <div class="fix ">

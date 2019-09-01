@@ -111,8 +111,7 @@ import { PopupComponent } from './stores/popup';
 import { ModalModule } from './stores/modal/modal.module';
 import { RequestComponent } from './stores/request/request.component';
 import { PopupComponent2 } from './stores/popup2';
-
-
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 
 
@@ -273,8 +272,11 @@ import { PopupComponent2 } from './stores/popup2';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule,
-    
+    ReactiveFormsModule, 
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+   
+
     BrowserModule,
         FormsModule,
         ModalModule,
