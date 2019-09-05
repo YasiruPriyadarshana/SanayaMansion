@@ -94,6 +94,7 @@ import { EventHeaderComponent } from './event/header/header.component';
 import { FinanceAppComponent } from './Finance/appfn.component';
 import { FHeaderComponent } from './Finance/header/header.component';
 import { ResAppComponent } from './reservation/apprv.component';
+import { DemoMaterialModule } from './catering/hotel-menu/catering-detail/catering-form/catering-form.module';
 
 
 
@@ -114,6 +115,8 @@ import { ResAppComponent } from './reservation/apprv.component';
     hotelCateringComponent,
     CateringEditComponent,
     CateringDetailComponent,
+    DemoMaterialModule,
+    
 
     //customer
     SupplierComponent,
@@ -220,7 +223,8 @@ import { ResAppComponent } from './reservation/apprv.component';
     LoginComponent,
     DailyReportComponent,
     EditDailyReportComponent,
-    FHeaderComponent
+    FHeaderComponent,
+     
 
     
 
