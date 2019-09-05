@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SanayaHomeComponent implements OnInit {
 
+  public myInterval: number = 3000;
+   public activeSlideIndex: number = 0; 
+   public noWrapSlides:boolean = false;
+  
   constructor() { }
 
   ngOnInit() {

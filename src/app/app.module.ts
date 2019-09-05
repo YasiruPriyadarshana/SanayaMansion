@@ -73,7 +73,7 @@ import { DailyReportComponent } from './Finance/daily-report/daily-report.compon
 import { EditDailyReportComponent } from './Finance/daily-report/edit-daily-report/edit-daily-report.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HallService } from './propertyMangement/halls/hall.service';
 import { VehicleListService } from './propertyMangement/vehicle-list/vehicle-list.service';
 import { RoomService } from './propertyMangement/rooms/room.service';
@@ -84,7 +84,7 @@ import { CRoomsComponent } from './customer/rooms/rooms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
+
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -96,6 +96,24 @@ import { FHeaderComponent } from './Finance/header/header.component';
 import { ResAppComponent } from './reservation/apprv.component';
 import { DemoMaterialModule } from './catering/hotel-menu/catering-detail/catering-form/catering-form.module';
 
+import { MAT_DIALOG_DEFAULT_OPTIONS, } from '@angular/material/dialog';
+
+
+
+import {
+  MatButtonModule,
+  MatCommonModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatAutocompleteModule,
+} from '@angular/material';
+import { PopupComponent } from './stores/popup';
+import { ModalModule } from './stores/modal/modal.module';
+import { RequestComponent } from './stores/request/request.component';
+import { PopupComponent2 } from './stores/popup2';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 
 
 @NgModule({
@@ -105,11 +123,16 @@ import { DemoMaterialModule } from './catering/hotel-menu/catering-detail/cateri
     DropDownDirective,
     SanayaHomeComponent,
     MainNavComponent,
+    
+    RequestComponent,
+    
     //stores
     StoresComponent,
     StoreItemsComponent,
     DecorationComponent,
-
+    PopupComponent2,
+    PopupComponent,
+    
     //catering
     CateringComponent,
     hotelCateringComponent,
@@ -224,8 +247,15 @@ import { DemoMaterialModule } from './catering/hotel-menu/catering-detail/cateri
     DailyReportComponent,
     EditDailyReportComponent,
     FHeaderComponent,
+<<<<<<< HEAD
      
 
+=======
+    
+   
+    
+    
+>>>>>>> 13404f43cf62a5d5c8fa13799930874e970ca5c1
     
 
   ],
@@ -241,9 +271,26 @@ import { DemoMaterialModule } from './catering/hotel-menu/catering-detail/cateri
     MatIconModule,
     MatListModule,
     
+    MatButtonModule,
+    MatCommonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule, 
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    
+
+    BrowserModule,
+        FormsModule,
+        ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService],
+  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
