@@ -11,6 +11,11 @@ export class VehicleListService{
         new Vehicle('v003','CAB0000','Benz')
       ];
 
+      setVehicles(vehicles: Vehicle[]){
+        this.vehicles = vehicles;
+        this.vehiclesChanged.next(this.vehicles.slice());
+      }
+
     getVehicles(){
         return this.vehicles.slice();
     }
