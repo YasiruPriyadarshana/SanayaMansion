@@ -112,6 +112,7 @@ import { ModalModule } from './stores/modal/modal.module';
 import { RequestComponent } from './stores/request/request.component';
 import { PopupComponent2 } from './stores/popup2';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { storeItemService } from './stores/store-items/store-item.service';
 
 
 
@@ -282,7 +283,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

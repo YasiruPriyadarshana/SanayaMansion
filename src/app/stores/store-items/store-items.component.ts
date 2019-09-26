@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { sitem } from './store-item.model';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { storeItemService } from './store-item.service';
 
 @Component({
   selector: 'app-store-items',
@@ -8,13 +11,19 @@ import { Component, OnInit } from '@angular/core';
   
 })
 export class StoreItemsComponent implements OnInit {
+  sitem:sitem[];
 
+  constructor(private storeItemService:storeItemService,private route:ActivatedRoute, private router:Router) {}
   ngOnInit() {
-    
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.sitem =this.storeItemService.getRecipe();
+      }
+    );
   }
   
 
-  constructor() {}
+  
 
   
  
