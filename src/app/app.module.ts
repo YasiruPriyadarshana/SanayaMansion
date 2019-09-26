@@ -115,6 +115,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { DataStorageService } from './propertyMangement/shared/data-storage.service';
 import { HttpClientModule } from '@angular/common/http';
 import { storeItemService } from './stores/store-items/store-item.service';
+import { DataStorageServiceSanaya } from './shared/data-storage.service';
 
 
 
@@ -286,7 +287,7 @@ import { storeItemService } from './stores/store-items/store-item.service';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,DataStorageService,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -17,28 +17,28 @@ export class storeItemService{
         ,new sitem('ST004','Ham','13','darshana','2019-06-06','Cheff','250')
        
       ];
-    setRecipe(sitem: sitem[]){
+    setsitem(sitem: sitem[]){
         this.sitem=sitem;
         this.sitemChanged.next(this.sitem.slice());
     }
 
-    getRecipe(){
+    getsitem(){
         return this.sitem.slice();
     }
-    getRecipes(index: number){
+    getsitems(index: number){
         return this.sitem[index];
     }
    
 
-    addRecipe(sitem:sitem){
+    addsitem(sitem:sitem){
         this.sitem.push(sitem);
         this.sitemChanged.next(this.sitem.slice());
     }
-    updateRecipe(index: number, newsitem:sitem){
+    updatesitem(index: number, newsitem:sitem){
         this.sitem[index] = newsitem;
         this.sitemChanged.next(this.sitem.slice());
     }
-    deleteRecipe(index: number){
+    deletesitem(index: number){
         this.sitem.splice(index, 1);
         this.sitemChanged.next(this.sitem.slice());
 

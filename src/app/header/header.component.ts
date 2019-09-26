@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataStorageServiceSanaya } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    
   }
 
+  constructor(private DataStorageService:DataStorageServiceSanaya){}
+  onSaveData(){
+      this.DataStorageService.storeSItem()
+          .subscribe(
+              (response: Response) => {
+                  console.log(response);
+              }
+          );
+  }
+  onFatchData(){
+      this.DataStorageService.getSItem();
+  }
 }

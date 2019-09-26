@@ -17,7 +17,7 @@ export class StoreItemsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
-        this.sitem =this.storeItemService.getRecipe();
+        this.sitem =this.storeItemService.getsitem();
       }
     );
   }
