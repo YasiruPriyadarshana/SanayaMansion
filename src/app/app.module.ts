@@ -114,6 +114,7 @@ import { PopupComponent2 } from './stores/popup2';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { DataStorageService } from './propertyMangement/shared/data-storage.service';
 import { HttpClientModule } from '@angular/common/http';
+import { storeItemService } from './stores/store-items/store-item.service';
 
 
 
