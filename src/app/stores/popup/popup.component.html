@@ -16,15 +16,13 @@
                                        
                                 <div class="col-xs-5 form-group">
                                         <label>Items</label><br>
-                                <input type="text" placeholder="" formControlName="item" class="form-control" [formControl]="control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.item.errors }" />
+                                <input type="text"  class="form-control" [formControl]="control"  [matAutocomplete]="auto"  />
                                 <mat-autocomplete #auto="matAutocomplete">
                                   <mat-option *ngFor="let itemv of filtereditemsv | async" [value]="itemv">
                                     {{itemv}}
                                   </mat-option>
                                 </mat-autocomplete>
-                                <div *ngIf="submitted && f.item.errors" class="invalid-feedback">
-                                        <div *ngIf="f.item.errors.required">item is required</div>       
-                                </div>
+                                
                             </div>
                              
             

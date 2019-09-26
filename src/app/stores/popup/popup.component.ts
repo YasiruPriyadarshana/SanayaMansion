@@ -30,7 +30,7 @@ export class PopupComponent implements OnInit {
           );
           
           this.registerForm = this.formBuilder.group({
-              item: ['', Validators.required],
+             
               
               quantity: ['', Validators.required],
               supplier: ['', Validators.required],
