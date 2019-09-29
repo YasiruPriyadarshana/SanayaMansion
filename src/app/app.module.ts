@@ -116,6 +116,10 @@ import { DataStorageService } from './propertyMangement/shared/data-storage.serv
 import { HttpClientModule } from '@angular/common/http';
 import { storeItemService } from './stores/store-items/store-item.service';
 import { DataStorageServiceSanaya } from './shared/data-storage.service';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 
@@ -135,6 +139,8 @@ import { DataStorageServiceSanaya } from './shared/data-storage.service';
     DecorationComponent,
     PopupComponent2,
     PopupComponent,
+    SignupComponent,
+    SigninComponent,
     
     //catering
     CateringComponent,
@@ -287,7 +293,7 @@ import { DataStorageServiceSanaya } from './shared/data-storage.service';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

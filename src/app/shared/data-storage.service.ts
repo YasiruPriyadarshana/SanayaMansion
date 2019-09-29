@@ -20,6 +20,6 @@ export class DataStorageServiceSanaya{
                     this.storeItemService.setsitem(sitem);
                 }
             );
-
     }
+    
 }

@@ -25,6 +25,7 @@
     "angular-bootstrap-datetimepicker": "^3.0.0",
     "angular-form-builder": "^0.1.9",
     "bootstrap": "^3.4.1",
+    "firebase": "^7.0.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",

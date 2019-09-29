@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataStorageServiceSanaya } from '../shared/data-storage.service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
     
   }
 
-  constructor(private DataStorageService:DataStorageServiceSanaya){}
+  constructor(private DataStorageService:DataStorageServiceSanaya, private authService:AuthService){}
   onSaveData(){
       this.DataStorageService.storeSItem()
           .subscribe(
@@ -22,5 +23,8 @@ export class HeaderComponent implements OnInit {
   }
   onFatchData(){
       this.DataStorageService.getSItem();
+  }
+  onLogout(){
+    this.authService.logout();
   }
 }

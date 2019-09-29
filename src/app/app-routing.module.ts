@@ -45,6 +45,8 @@ import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r
 import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
 import { PopupComponent } from './stores/popup/popup.component';
 import { RequestComponent } from './stores/request/request.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 const routes: Routes = [
@@ -63,6 +65,8 @@ const routes: Routes = [
     { path: 'pop', component: PopupComponent },
     
   ]},
+  { path: 'signup' , component:SignupComponent},
+  { path: 'signin' , component:SigninComponent},
   { path: 'propertyManagement', component: PropAppComponent, children:[
        { path:'rooms', component: RoomsComponent, children: [
            { path:'',component: RoomStartComponent },

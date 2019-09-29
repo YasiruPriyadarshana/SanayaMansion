@@ -12,9 +12,9 @@ export class storeItemService{
 
     recipeSelected = new EventEmitter<sitem>();
     private sitem:sitem[] = [
-        new sitem('ST002','Meat','13','fish mart','2019-06-06','Cheff','230')
-        ,new sitem('ST003','Vegitable','50','vijaya','2019-06-06','staff member','256')
-        ,new sitem('ST004','Ham','13','darshana','2019-06-06','Cheff','250')
+        new sitem('2','Meat','13','fish mart','2019-06-06','Cheff','230')
+        ,new sitem('3','Vegitable','50','vijaya','2019-06-06','staff member','256')
+        ,new sitem('4','Ham','13','darshana','2019-06-06','Cheff','250')
        
       ];
     setsitem(sitem: sitem[]){
