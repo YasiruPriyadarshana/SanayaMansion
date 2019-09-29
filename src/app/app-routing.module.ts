@@ -56,6 +56,8 @@ import { DessertsComponent } from './catering/restaurent/desserts/desserts.compo
 import { PastryComponent } from './catering/restaurent/pastry/pastry.component';
 import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
 
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 const routes: Routes = [
@@ -87,6 +89,8 @@ const routes: Routes = [
     { path: 'pop', component: PopupComponent },
     
   ]},
+  { path: 'signup' , component:SignupComponent},
+  { path: 'signin' , component:SigninComponent},
   { path: 'propertyManagement', component: PropAppComponent, children:[
        { path:'rooms', component: RoomsComponent, children: [
            { path:'',component: RoomStartComponent },
@@ -152,5 +156,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }

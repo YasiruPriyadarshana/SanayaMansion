@@ -124,6 +124,14 @@ import { PastryComponent } from './catering/restaurent/pastry/pastry.component';
 import { DessertsComponent } from './catering/restaurent/desserts/desserts.component';
 import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
 
+import { DataStorageService } from './propertyMangement/shared/data-storage.service';
+import { HttpClientModule } from '@angular/common/http';
+import { storeItemService } from './stores/store-items/store-item.service';
+import { DataStorageServiceSanaya } from './shared/data-storage.service';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 
@@ -143,6 +151,8 @@ import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
     DecorationComponent,
     PopupComponent2,
     PopupComponent,
+    SignupComponent,
+    SigninComponent,
     
     //catering
     CateringComponent,
@@ -302,6 +312,7 @@ import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
     ReactiveFormsModule, 
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    HttpClientModule,
     
 
     BrowserModule,
@@ -309,7 +320,7 @@ import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

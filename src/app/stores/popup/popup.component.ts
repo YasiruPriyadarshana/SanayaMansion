@@ -3,6 +3,8 @@ import { ModalService } from '../modal/modal.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {startWith, map} from 'rxjs/operators';
+import { storeItemService } from '../store-items/store-item.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,13 +17,15 @@ export class PopupComponent implements OnInit {
     submitted = false;
     control = new FormControl();
     control2 = new FormControl();
+    id:number;
+    editMode = false;
     
     itemv: string[] = ['Chicken', 'Fish', 'Green beans', 'Mung bean'];
     
     filtereditemsv: Observable<string[]>;
     
 
-    constructor(private modalService: ModalService,private formBuilder: FormBuilder) { }
+    constructor(private modalService: ModalService,private formBuilder: FormBuilder,private storeItemService:storeItemService,private router:Router,private route:ActivatedRoute) { }
 
     ngOnInit() {
         this.filtereditemsv = this.control.valueChanges.pipe(
@@ -30,8 +34,9 @@ export class PopupComponent implements OnInit {
           );
           
           this.registerForm = this.formBuilder.group({
-              item: ['', Validators.required],
-              
+              id:['',Validators.nullValidator],
+              date:['',Validators.required],
+              item:['',Validators.required],
               quantity: ['', Validators.required],
               supplier: ['', Validators.required],
               price: ['', Validators.required],
@@ -46,14 +51,24 @@ get f() { return this.registerForm.controls; }
 onSubmit() {
     this.submitted = true;
 
-    // stop here if form is invalid
+    
     if (this.registerForm.invalid) {
+        console.log("fup");
         return;
     }
+    if(this.editMode){
+          this.storeItemService.updatesitem(this.id, this.registerForm.value);
+        }else{
+          this.storeItemService.addsitem(this.registerForm.value);
+        }
+        this.onCancel();
+      
 
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
 }
+onCancel(){
+    this.router.navigate(['../'], {relativeTo: this.route});
+    this.ngOnInit();
+  }
 
 onReset() {
     this.submitted = false;

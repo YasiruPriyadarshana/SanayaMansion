@@ -16,14 +16,14 @@
                                        
                                 <div class="col-xs-5 form-group">
                                         <label>Items</label><br>
-                                <input type="text" placeholder="" formControlName="item" class="form-control" [formControl]="control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.item.errors }" />
+                                <input type="text"  class="form-control" formControlName="item"   [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.item.errors }"  />
                                 <mat-autocomplete #auto="matAutocomplete">
                                   <mat-option *ngFor="let itemv of filtereditemsv | async" [value]="itemv">
                                     {{itemv}}
                                   </mat-option>
                                 </mat-autocomplete>
                                 <div *ngIf="submitted && f.item.errors" class="invalid-feedback">
-                                        <div *ngIf="f.item.errors.required">item is required</div>       
+                                    <div *ngIf="f.item.errors.required">item is required</div>
                                 </div>
                             </div>
                              
@@ -69,9 +69,9 @@
                     <label>Request</label>
                     <select formControlName="request" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.request.errors }">
                         
-                        <option value="Mr">Cheff</option>
-                        <option value="Mrs">Staff member</option>
-                        <option value="Miss">Store keeper</option>
+                        <option>Cheff</option>
+                        <option>Staff member</option>
+                        <option>Store keeper</option>
                     </select>
                     <div *ngIf="submitted && f.request.errors" class="invalid-feedback">
                         <div *ngIf="f.request.errors.required">Request is required</div>
@@ -81,15 +81,17 @@
                 <div class=" col-xs-5 form-group" >
                     <label>Date Time</label>
                         
-                        <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control">
+                        <input [owlDateTimeTrigger]="dt" formControlName="date"  [owlDateTime]="dt" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
                         <owl-date-time #dt></owl-date-time>
-                    
+                        <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                            <div *ngIf="f.date.errors.required">Date is required</div>
+                        </div>
             </div>
             </div>
        <div class="row">
                 <div class="fix ">
             <div class="text-center">
-            <button class="btn btn-primary mr-1">Add Item</button>
+            <button class="btn btn-primary mr-1" type="submit">Add Item</button>
             <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
             </div>
                 </div>

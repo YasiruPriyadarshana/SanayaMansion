@@ -13,36 +13,19 @@
       </tr>
     </thead>
     
-    <tbody>
-      <tr class="table-info">
-        <th scope="row">ST002</th>
+    <tbody *ngFor="let sitem of sitem;let i = index">
+       
+      <tr class="table-info" >
+        <th scope="row" >ST{{sitem.id}}</th>
         
-        <td>Meat</td>
-        <td>13</td>
-        <td>fish mart</td>
-        <td>2019-06-06</td>
-        <td>Cheff</td>
-        <td>230</td>
-      </tr>
-      <tr>
-        <th scope="row">ST004</th>
-        
-        <td>Vegitable</td>
-        <td>50</td>
-        <td>vijaya</td>
-        <td>2019-06-06</td>
-        <td>staff member</td>
-        <td>360</td>
-      </tr>
-      <tr class="table-info">
-        <th scope="row">ST005</th>
-        
-        <td>Ham</td>
-        <td>12</td>
-        <td>darshana</td>
-        <td>2019-06-06</td>
-        <td>Cheff</td>
-        <td>250</td>
+        <td>{{sitem.item}}</td>
+        <td>{{sitem.quantity}}</td>
+        <td>{{sitem.supplier}}</td>
+        <td>{{sitem.date}}</td>
+        <td>{{sitem.request}}</td>
+        <td>{{sitem.price}}</td>
+        <button class="btn btn-success">Edit</button>
+        <button class="btn btn-danger" (click)="onDeleteRecipe(i)">Delete</button>
       </tr>
       
     </tbody>

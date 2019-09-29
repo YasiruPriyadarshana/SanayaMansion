@@ -8,17 +8,22 @@
         <ul class="nav navbar-nav">
             <li routerLinkActive="active"><a routerLink='/catering'>Catering</a></li>
             <li routerLinkActive="active"><a routerLink='/customer'>Customer</a></li>
-            <li routerLinkActive="active"><a routerLink='/stores'>Store</a></li>
-            <li routerLinkActive="active"><a routerLink='/propertyManagement'>Property Management</a></li>
-            <li routerLinkActive="active"><a routerLink='/staff'>Staff Management</a></li>
+            <li routerLinkActive="active"><a routerLink='/stores' *ngIf="authService.isAuthenticated()">Store</a></li>
+            <li routerLinkActive="active"><a routerLink='/propertyManagement' *ngIf="authService.isAuthenticated()">Property Management</a></li>
+            <li routerLinkActive="active"><a routerLink='/staff' *ngIf="authService.isAuthenticated()">Staff Management</a></li>
             <li routerLinkActive="active"><a routerLink='/shopping-list'>Shopping</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right ">
-            <li class="dropdown" appDropDown>
-                <a style="cursor: pointer;" class="dropdown-toggle" role="button">Login<span class="caret"></span></a>
+            <ng-template [ngIf]="!authService.isAuthenticated()">
+                <li><a routerLink="/signup">Register</a></li>
+                <li><a routerLink="/signin">Login</a></li>        
+        </ng-template>
+        <li><a style="cursor: pointer;" (click)="onLogout()" *ngIf="authService.isAuthenticated()">Logout</a></li>
+        <li class="dropdown" appDropDown *ngIf="authService.isAuthenticated()">
+                <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li ><a style="cursor: pointer;"></a>Save Data</li>
-                    <li ><a style="cursor: pointer;"></a>Fatch Data</li>
+                        <li ><a style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
+                        <li ><a style="cursor: pointer;" (click)="onFatchData()">Fatch Data</a></li>
                 </ul>
             </li>
         </ul>
