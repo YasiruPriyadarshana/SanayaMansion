@@ -40,10 +40,10 @@ import { AppCusComponent } from './customer/app-cus.component';
 import { CusHeaderComponent } from './customer/header/header.component';
 import { DecorationComponent } from './stores/decoration/decoration.component';
 import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.component';
-import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
+
 import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
 import { CateringListComponent } from './catering/hotel-menu/catering-list/catering-list.component';
-import { CateringItemComponent } from './catering/hotel-menu/catering-list/catering-item/catering-item.component';
+
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './catering/shopping-list/shopping-edit/shopping-edit.component';
 import { StoreItemsComponent } from './stores/store-items/store-items.component';
@@ -94,10 +94,9 @@ import { EventHeaderComponent } from './event/header/header.component';
 import { FinanceAppComponent } from './Finance/appfn.component';
 import { FHeaderComponent } from './Finance/header/header.component';
 import { ResAppComponent } from './reservation/apprv.component';
-import { DemoMaterialModule } from './catering/hotel-menu/catering-detail/catering-form/catering-form.module';
+
 
 import { MAT_DIALOG_DEFAULT_OPTIONS, } from '@angular/material/dialog';
-
 
 
 import {
@@ -113,6 +112,18 @@ import { ModalModule } from './stores/modal/modal.module';
 import { RequestComponent } from './stores/request/request.component';
 import { PopupComponent2 } from './stores/popup2';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { CateringFormComponent } from './catering/hotel-menu/catering-detail/catering-form/catering-form.component';
+import { MenuTypeComponent } from './catering/hotel-menu/catering-detail/catering-form/menu-type/menu-type.component';
+import { HotelComponent } from './catering/hotel/hotel.component';
+import { RestaurentComponent } from './catering/restaurent/restaurent.component';
+import { HotelformComponent } from './catering/hotel/hotelform/hotelform.component';
+import { Plate1990Component } from './catering/hotel/plate1990/plate1990.component';
+import { Plate2100Component } from './catering/hotel/plate2100/plate2100.component';
+import { Plate3200Component } from './catering/hotel/plate3200/plate3200.component';
+import { PastryComponent } from './catering/restaurent/pastry/pastry.component';
+import { DessertsComponent } from './catering/restaurent/desserts/desserts.component';
+import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
+
 
 
 
@@ -136,9 +147,10 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     //catering
     CateringComponent,
     hotelCateringComponent,
-    CateringEditComponent,
+   
     CateringDetailComponent,
-    DemoMaterialModule,
+    
+    
     
 
     //customer
@@ -150,7 +162,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     AppCusComponent,
     CusHeaderComponent,
     CateringListComponent,
-    CateringItemComponent,
+ 
     ShoppingListComponent,
     ShoppingEditComponent,
     CRoomsComponent,
@@ -247,15 +259,22 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     DailyReportComponent,
     EditDailyReportComponent,
     FHeaderComponent,
-<<<<<<< HEAD
-     
-
-=======
+    CateringFormComponent,
+    MenuTypeComponent,
+    HotelComponent,
+    RestaurentComponent,
+    HotelformComponent,
+    Plate1990Component,
+    Plate2100Component,
+    Plate3200Component,
+    PastryComponent,
+    DessertsComponent,
+    DrinksComponent,
+   
     
    
     
     
->>>>>>> 13404f43cf62a5d5c8fa13799930874e970ca5c1
     
 
   ],

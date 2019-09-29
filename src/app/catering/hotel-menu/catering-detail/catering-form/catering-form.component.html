@@ -1,37 +1,34 @@
-<div class="example-container">
-        <form class="example-container" [formGroup]="options">
-          <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
-          <div>
-            <label>Float label: </label>
-            <mat-radio-group formControlName="floatLabel">
-              <mat-radio-button value="auto">Auto</mat-radio-button>
-              <mat-radio-button value="always">Always</mat-radio-button>
-              <mat-radio-button value="never">Never</mat-radio-button>
-            </mat-radio-group>
-          </div>
+
+<form [formGroup]="profileForm">
+  
+        <label>
+          Customer Name:
+          <input type="text" formControlName="customerName">
+        </label>
+      
+        <label>
+            Customer Number:
+          <input type="text" formControlName="customerNumber">
+        </label>
+        <app-menu-type></app-menu-type>
+
+        <label>
+                Number of Plates:
+              <input type="number" formControlName="numberOfPlates">
+            </label>
+
+            <label>
+                Dates:
+                  <input type="date" formControlName="dateTime">
+                </label>
+            <label>
+                    Time:
+                    <input type="time" formControlName="time">
+            </label>
+            
         </form>
+        
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"></form>
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
       
-        <mat-form-field
-            [hideRequiredMarker]="options.value.hideRequired"
-            [floatLabel]="options.value.floatLabel">
-          <input matInput placeholder="Simple placeholder" required>
-        </mat-form-field>
-      
-        <mat-form-field [floatLabel]="options.value.floatLabel">
-          <mat-label>Both a label and a placeholder</mat-label>
-          <input matInput placeholder="Simple placeholder">
-        </mat-form-field>
-      
-        <mat-form-field
-            [hideRequiredMarker]="options.value.hideRequired"
-            [floatLabel]="options.value.floatLabel">
-          <mat-select required>
-            <mat-option>-- None --</mat-option>
-            <mat-option value="option">Option</mat-option>
-          </mat-select>
-          <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
-        </mat-form-field>
-      </div>
-      
-      
-     

@@ -4,8 +4,10 @@
          [src]="catering.imagePath" alt="{{catering.name}}" class="img-responsive">
     </div>
     <div class="col-xs-3">
-        <h1>{{ catering.name }}</h1>
-        <app-catering-form></app-catering-form>
+        <h1>{{ catering[0].name}}</h1>
+        <h3> Catering form </h3>
+        <app-catering-form ></app-catering-form>
+        <hr>
          <div class="btn-group" appDropDown>
             <button type="button" class="btn btn-primary dropdown-toggle">Menu types
                 <span class="caret"></span>
@@ -15,12 +17,14 @@
                 <li><a (click)="onAddToSoppingList2()" style="cursor: pointer;">Rs 2450.00</a></li>
                 <li><a style="cursor: pointer;">Rs 3200.00</a></li>
             </ul>
-            {{catering.description}}
+            {{catering[0].description}}
         </div>
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let ingredient of catering.ingredients">{{ingredient.name}} - {{ingredient.amount}}</li>
+            <li class="list-group-item" *ngFor="let ingredient of catering.ingredients">{{ingredient[0].name}} - {{ingredient.amount[0]}}</li>
         </ul>
+        
     </div>
+    
    
 
 
