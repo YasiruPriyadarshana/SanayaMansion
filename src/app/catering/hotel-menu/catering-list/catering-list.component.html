@@ -1,15 +1,28 @@
 <h1 class="add">Catering Management</h1>
-<div class="row">
-        <div class="col-xs-12">
-           
+<div>
+    <a style="cursor: pointer;" class="list-group-item clearfix" routerLink='hotel' routerLinkActive="active">
+        <div class="pull-right">
+            <h3 class="list-group-item-heading">{{catering[0].name}}</h3>
+            <p class="list-group-item-text">{{catering[0].description}}</p>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <app-catering-item *ngFor="let cateringEl of catering;let i = index"
-            [catering]="cateringEl"
-            [index]="i"></app-catering-item>
+        <span class="pull-left">
+            <img   [src]="catering[0].imagePath" alt="{{catering[0].name}}" class="img-responsive" style="max-height: 100px;">
+            
+        </span>
+        
+    </a>
+</div>
+<div>
+    <a style="cursor: pointer;" class="list-group-item clearfix" routerLink='restaurent' routerLinkActive="active">
+        <div class="pull-right">
+            <h3 class="list-group-item-heading">{{catering[1].name}}</h3>
+            <p class="list-group-item-text">{{catering[1].description}}</p>
         </div>
-    </div>
-
+        <span class="pull-left">
+            <img   [src]="catering[1].imagePath" alt="{{catering[1].name}}" class="img-responsive" style="max-height: 100px;">
+            
+        </span>
+        
+    </a>
+</div>
     

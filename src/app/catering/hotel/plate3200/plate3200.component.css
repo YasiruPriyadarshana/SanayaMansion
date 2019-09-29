@@ -1,0 +1,11 @@
+h1 {
+    text-shadow: 2px 2px 5px orange;
+  }
+
+  h2 {
+    text-shadow: 2px 2px 5px rgb(255, 153, 0);
+  }
+
+  h3 {
+    text-shadow: 2px 2px 5px hsl(68, 6%, 50%);
+  }

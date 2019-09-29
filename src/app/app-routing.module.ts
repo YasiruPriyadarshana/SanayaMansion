@@ -16,7 +16,7 @@ import { PropAppComponent } from './propertyMangement/app-prop.component';
 import { AppstaffComponent } from './staffmanager/appstaff.component';
 import { AppCusComponent } from './customer/app-cus.component';
 import { hotelCateringComponent } from './catering/hotel-menu/hotelcatering.component';
-import { CateringEditComponent } from './catering/hotel-menu/catering-edit/catering-edit.component';
+
 import { CateringDetailComponent } from './catering/hotel-menu/catering-detail/catering-detail.component';
 import { ShoppingListComponent } from './catering/shopping-list/shopping-list.component';
 import { DecorationComponent } from './stores/decoration/decoration.component';
@@ -45,6 +45,17 @@ import { RBookingDetailsComponent } from './reservation/room/r-booking-details/r
 import { HBookingDetailsComponent } from './reservation/hall/h-booking-details/h-booking-details.component';
 import { PopupComponent } from './stores/popup/popup.component';
 import { RequestComponent } from './stores/request/request.component';
+import { CateringFormComponent } from './catering/hotel-menu/catering-detail/catering-form/catering-form.component';
+import { HotelComponent } from './catering/hotel/hotel.component';
+import { RestaurentComponent } from './catering/restaurent/restaurent.component';
+import { Plate1990Component } from './catering/hotel/plate1990/plate1990.component';
+import { Plate2100Component } from './catering/hotel/plate2100/plate2100.component';
+import { Plate3200Component } from './catering/hotel/plate3200/plate3200.component';
+import { HotelformComponent } from './catering/hotel/hotelform/hotelform.component';
+import { DessertsComponent } from './catering/restaurent/desserts/desserts.component';
+import { PastryComponent } from './catering/restaurent/pastry/pastry.component';
+import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
+
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 
@@ -54,10 +65,23 @@ const routes: Routes = [
   { path: 'Home', component:SanayaHomeComponent},
   { path: 'catering', component:CateringComponent, children: [
     { path: '' ,component: hotelCateringComponent },
-    { path: 'new', component:CateringEditComponent},
-    { path: ':id', component: CateringDetailComponent},
-    { path: ':id/edit', component:CateringEditComponent}
-  ]},
+    
+    { path: 'hotel', component: HotelComponent,children: [
+      { path: '',component:Plate1990Component },
+      { path: 'plate1990',component:Plate1990Component },
+      { path: 'plate2100',component:Plate2100Component },
+      { path: 'plate3200',component:Plate3200Component },
+      
+    ]},
+    { path: 'restaurent', component: RestaurentComponent,children: [
+      { path: 'pastry',component:PastryComponent},
+      { path: 'desserts',component:DessertsComponent},
+      { path: 'drinks',component:DrinksComponent},
+    ]},
+    { path: 'hotelform',component:HotelformComponent },
+     ]},
+    
+
   { path: 'stores', component:StoresComponent, children: [
     { path: '' ,component: DecorationComponent},
     { path: 'storeItems',component: StoreItemsComponent},
@@ -87,7 +111,9 @@ const routes: Routes = [
     { path:'schedules',component: SchedulesComponent },
     { path:'staffattendence',component: StaffAttendanceComponent },
     { path:'empregister',component: EmpregisterComponent },
-    { path:'staffcomponent',component: StaffComponent }
+    { path:'staffcomponent',component: StaffComponent },
+
+    
   ]},
   {path: 'customer', component: AppCusComponent, children: [
     { path:'rooms',component: CRoomsComponent },
