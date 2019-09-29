@@ -27,6 +27,7 @@ export class AuthService{
                         .then(
                             (token: string) => this.token = token
                         )
+                
                 }
             )
             .catch(
@@ -50,4 +51,5 @@ export class AuthService{
     isAuthenticated(){
         return this.token !=null;
     }
+    
 }

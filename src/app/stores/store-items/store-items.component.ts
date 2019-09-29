@@ -22,7 +22,7 @@ export class StoreItemsComponent implements OnInit {
     );
   }
 
-  onDeleteRecipe(index:number){
+  onDeleteItem(index:number){
     this.storeItemService.deletesitem(index);
     this.ngOnInit();
   }

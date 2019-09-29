@@ -120,6 +120,8 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { decorationItemService } from './stores/decoration/decoration.service';
+import { PopupComponent3 } from './stores/popup3';
 
 
 
@@ -139,6 +141,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     DecorationComponent,
     PopupComponent2,
     PopupComponent,
+    PopupComponent3,
     SignupComponent,
     SigninComponent,
     
@@ -293,7 +296,7 @@ import { SigninComponent } from './auth/signin/signin.component';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,AuthService,AuthGuard],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

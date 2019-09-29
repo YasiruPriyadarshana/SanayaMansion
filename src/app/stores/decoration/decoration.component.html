@@ -17,38 +17,19 @@
   <!--Table head-->
 
   <!--Table body-->
-  <tbody>
-    <tr class="table-info">
-      <th scope="row">DE002</th>
-      
-      <td>flowers</td>
-      <td>13</td>
-      <td>superShipping</td>
-      <td>2019-06-06</td>
-      <td>staff</td>
-      <td>230</td>
-    </tr>
-    <tr>
-      <th scope="row">DE004</th>
-      
-      <td>banners</td>
-      <td>50</td>
-      <td>superShipping</td>
-      <td>2019-06-06</td>
-      <td>staff</td>
-      <td>360</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">DE005</th>
-      
-      <td>paper</td>
-      <td>12</td>
-      <td>superShipping</td>
-      <td>2019-06-06</td>
-      <td>store keeper</td>
-      <td>250</td>
-    </tr>
-    
+  <tbody *ngFor="let ditem of ditem;let i = index">
+   <tr class="table-info" >
+    <th scope="row" >DE{{ditem.id}}</th>
+        
+    <td>{{ditem.item}}</td>
+    <td>{{ditem.quantity}}</td>
+    <td>{{ditem.supplier}}</td>
+    <td>{{ditem.date}}</td>
+    <td>{{ditem.request}}</td>
+    <td>{{ditem.price}}</td>
+    <button class="btn btn-success">Edit</button>
+        <button class="btn btn-danger" (click)="onDeleteItem(i)">Delete</button>
+  </tr>
   </tbody>
   <!--Table body-->
 
