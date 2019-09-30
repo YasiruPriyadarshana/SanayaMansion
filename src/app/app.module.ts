@@ -134,6 +134,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { decorationItemService } from './stores/decoration/decoration.service';
 import { PopupComponent3 } from './stores/popup3';
+import { OrdersComponent } from './catering/orders/orders.component';
+import { orderService } from './catering/orders/orders.service';
 
 
 
@@ -283,6 +285,7 @@ import { PopupComponent3 } from './stores/popup3';
     PastryComponent,
     DessertsComponent,
     DrinksComponent,
+    OrdersComponent,
    
     
    
@@ -323,7 +326,7 @@ import { PopupComponent3 } from './stores/popup3';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,AuthService,AuthGuard],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,orderService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

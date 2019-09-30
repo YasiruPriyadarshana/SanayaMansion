@@ -58,6 +58,7 @@ import { DrinksComponent } from './catering/restaurent/drinks/drinks.component';
 
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { OrdersComponent } from './catering/orders/orders.component';
 
 
 const routes: Routes = [
@@ -150,7 +151,8 @@ const routes: Routes = [
     
   ] },
 
-  {path: 'shopping-list',component: ShoppingListComponent}
+  {path: 'shopping-list',component: ShoppingListComponent},
+  {path: 'orders',component: OrdersComponent }
 ];
 
 @NgModule({

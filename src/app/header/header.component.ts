@@ -26,10 +26,17 @@ export class HeaderComponent implements OnInit {
                   console.log(response);
               }
           );
+          this.DataStorageService.storedOders()
+          .subscribe(
+              (response: Response) => {
+                  console.log(response);
+              }
+          );
   }
   onFatchData(){
       this.DataStorageService.getSItem();
       this.DataStorageService.getdItem();
+      this.DataStorageService.getorder();
   }
   onLogout(){
     this.authService.logout();
