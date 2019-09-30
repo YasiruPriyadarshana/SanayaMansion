@@ -29,6 +29,12 @@ export class HeaderComponent implements OnInit {
           );
           this.DataStorageService.storerequest()
           .subscribe(
+            (response: Response) => {
+                console.log(response);
+              }
+           );
+          this.DataStorageService.storedOders()
+          .subscribe(
               (response: Response) => {
                   console.log(response);
               }
@@ -38,6 +44,7 @@ export class HeaderComponent implements OnInit {
       this.DataStorageService.getSItem();
       this.DataStorageService.getdItem();
       this.DataStorageService.getrequest();
+      this.DataStorageService.getorder();
   }
   onLogout(){
     this.authService.logout();
