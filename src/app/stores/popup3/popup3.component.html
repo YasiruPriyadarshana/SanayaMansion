@@ -6,14 +6,26 @@
 </div>
 
 <jw-modal id="custom-modal-1" >
-    <div style="height:350px">
+    <div style="height:420px">
             
                     <h5 class="card-header">Request</h5>
                     
-                        
                 
                             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
+
+                                    
                                     <div class="row">
+                                            <div class=" col-xs-5 form-group">
+                                                    <label>Type</label>
+                                                    <select formControlName="request" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.request.errors }">
+                                                        
+                                                        <option value="Mr">Store-item</option>
+                                                        <option value="Mrs">decoration</option>
+                                                    </select>
+                                                    <div *ngIf="submitted && f.request.errors" class="invalid-feedback">
+                                                        <div *ngIf="f.request.errors.required">Request is required</div>
+                                                    </div>
+                                                </div>
                                            
                                     <div class="col-xs-5 form-group">
                                             <label>Items</label><br>
@@ -28,64 +40,59 @@
                                           </div>
                                 </div>
                                  
-                
-                
+                                <div class=" col-xs-5 form-group" >
+                                        <label>	Stock In Hand</label>
+                                        <input type="date" class="form-control" id="today" #todayInput required>
+                                </div>
+                                <div class=" col-xs-5 form-group" >
+                                        <label>	Issued</label>
+                                           
+                                            <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control">
+                                            <owl-date-time #dt></owl-date-time>
+                                        
+                                </div>
+                               
                         
                             <div class="col-xs-5 form-group">
-                                <label>Quantity</label>
+                                <label>Rate Rs.</label>
                                 <input type="number" formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" />
                                 <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
-                                    <div *ngIf="f.quantity.errors.required">Quantity is required</div>
+                                    <div *ngIf="f.quantity.errors.required">Rate is required</div>
                                 </div>
                             </div>
+                            <div class="col-xs-5 form-group">
+                                    <label>Value Rs.</label>
+                                    <input type="number" formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" />
+                                    <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+                                        <div *ngIf="f.quantity.errors.required">Value is required</div>
+                                    </div>
+                                </div>
                         </div>
                         <div class="row">
-                    <div class="col-xs-5 form-group">
-                            <label>Supplier</label>
-                           
-                            <select   formControlName="supplier" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.supplier.errors }">
-                                    
-                                    <option >Vijaya</option>
-                                    <option >Kig deliver</option>
-                                    <option >SuperFast</option>
-                                </select>
-                    <div *ngIf="submitted && f.supplier.errors" class="invalid-feedback">
-                         <div *ngIf="f.supplier.errors.required">supplier is required</div>
-                    </div>
-                 </div>
+                    
                 
                 
                 
                
                 <div class=" col-xs-5 form-group">
-                    <label>Price</label>
+                    <label>Cts</label>
                     <input type="price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
                     <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                        <div *ngIf="f.price.errors.required">Price is required</div>
+                        <div *ngIf="f.price.errors.required">Cts is required</div>
                     </div>
                 </div>
+                <div class=" col-xs-5 form-group">
+                        <label>Rrs</label>
+                        <input type="price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                            <div *ngIf="f.price.errors.required">Rrs is required</div>
+                        </div>
+                    </div>
                         </div>
                         <div class="row">
-                <div class=" col-xs-5 form-group">
-                        <label>Request</label>
-                        <select formControlName="request" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.request.errors }">
-                            
-                            <option value="Mr">Cheff</option>
-                            <option value="Mrs">Staff member</option>
-                            <option value="Miss">Store keeper</option>
-                        </select>
-                        <div *ngIf="submitted && f.request.errors" class="invalid-feedback">
-                            <div *ngIf="f.request.errors.required">Request is required</div>
-                        </div>
-                    </div>
                 
-                    <div class=" col-xs-5 form-group" >
-                        <label>Date Time</label>
-                           
-                            <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control">
-                            <owl-date-time #dt></owl-date-time>
-                        
-                </div>
+                
+                   
                 </div>
            <div class="row">
                     <div class="fix ">
