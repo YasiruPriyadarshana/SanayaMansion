@@ -3,6 +3,8 @@ import { ModalService } from '../modal/modal.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {startWith, map} from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
+import { requestService } from '../request/request.service';
 
 
 @Component({
@@ -15,12 +17,13 @@ export class PopupComponent3 implements OnInit {
     submitted = false;
     control = new FormControl();
     itemv: string[] = ['Paper', 'Flowers', 'balloons', 'banners'];
-    
+    editMode = false;
+    id:number;
     
     filtereditemsv: Observable<string[]>;
     
 
-    constructor(private modalService: ModalService,private formBuilder: FormBuilder) { }
+    constructor(private modalService: ModalService,private formBuilder: FormBuilder, private requestServive:requestService, private router:Router,private route:ActivatedRoute) { }
 
     ngOnInit() {
       this.filtereditemsv = this.control.valueChanges.pipe(
@@ -30,12 +33,17 @@ export class PopupComponent3 implements OnInit {
       
           
           this.registerForm = this.formBuilder.group({
+              type: ['', Validators.required],
+              item: ['', Validators.required],
+              stockInHand:['', Validators.required],
+              issued:['', Validators.required],
+              rateRs: ['', Validators.required],
+              ValueRs: ['', Validators.required],
+              cts: ['', Validators.required],
+              Rrs: ['', Validators.required],
              
-              decorations: ['', Validators.required],
-              quantity: ['', Validators.required],
-              supplier: ['', Validators.required],
-              price: ['', Validators.required],
-              request: ['', Validators.required],
+              
+              
               
           });
     }
@@ -44,15 +52,24 @@ export class PopupComponent3 implements OnInit {
 get f() { return this.registerForm.controls; }
 
 onSubmit() {
-    this.submitted = true;
+  this.submitted = true;
 
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-        return;
-    }
+    
+  if (this.registerForm.invalid) {
+      console.log("fup");
+      return;
+  }
+  if(this.editMode){
+        this.requestServive.updaterequest(this.id, this.registerForm.value);
+      }else{
+        this.requestServive.addrequest(this.registerForm.value);
+      }
+      this.onCancel();
+}
 
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+onCancel(){
+  this.router.navigate(['../'], {relativeTo: this.route});
+  this.ngOnInit();
 }
 
 onReset() {
