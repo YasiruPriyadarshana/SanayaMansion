@@ -7,12 +7,12 @@ import { ditem } from '../stores/decoration/decoration.model';
 import { order } from '../catering/orders/orders.model';
 import { decorationItemService } from '../stores/decoration/decoration.service';
 import { AuthService } from '../auth/auth.service';
-import { from } from 'rxjs';
+import { requestService } from '../stores/request/request.service';
+import { request } from '../stores/request/request.model';
 
 @Injectable()
 export class DataStorageServiceSanaya{
-    
-    constructor(private http: HttpClient, private authService:AuthService, private storeItemService:storeItemService, private decorationItemService:decorationItemService,private orderService:orderService){}
+    constructor(private http: HttpClient, private authService:AuthService, private storeItemService:storeItemService, private requestService:requestService, private decorationItemService:decorationItemService,private orderService:orderService){}
     
     storeSItem(){
         const token = this.authService.getToken();
@@ -45,6 +45,22 @@ export class DataStorageServiceSanaya{
             );
     }
 
+
+    storerequest(){
+        const token = this.authService.getToken();
+        return this.http.put('https://sanayamansion-e55bf.firebaseio.com/request.json?auth=' + token,this.requestService.getrequest());
+
+    }
+
+    getrequest(){
+        const token = this.authService.getToken();
+        this.http.get<request[]>('https://sanayamansion-e55bf.firebaseio.com/request.json?auth=' + token,)
+            .subscribe(
+                (request: request[]) => {
+                    this.requestService.setrequest(request);
+                }
+            );
+            }
     //Catering
 
     storedOders(){

@@ -16,48 +16,26 @@
       <th>Rrs</th>
     </tr>
   </thead>
-  <!--Table head-->
-
-  <!--Table body-->
-  <tbody>
-    <tr class="table-info">
-      <th scope="row">DE002</th>
+  
+  <tbody *ngFor="let request of request;let i = index">
+       
+      <tr class="table-info" >
+        <th scope="row" >RQ{{request.id}}</th>
+        
+        <td>{{request.type}}</td>
+        <td>{{request.item}}</td>
+        <td>{{request.stockInHand}}</td>
+        <td>{{request.issued}}</td>
+        <td>{{request.rateRs}}</td>
+        <td>{{request.ValueRs}}</td>
+        <td>{{request.cts}}</td>
+        <td>{{request.Rrs}}</td>
+        
+        <button class="btn btn-success">Edit</button>
+        <button class="btn btn-danger" (click)="onDeleteItem(i)">Delete</button>
+      </tr>
       
-      <td>flowers</td>
-      <td>13</td>
-      <td>superShipping</td>
-      <td>2019-06-06</td>
-      <td>designer</td>
-      <td>230</td>
-      <td>designer</td>
-      <td>230</td>
-    </tr>
-    <tr>
-      <th scope="row">ST004</th>
-      
-      <td>flowers</td>
-      <td>13</td>
-      <td>superShipping</td>
-      <td>2019-06-06</td>
-      <td>designer</td>
-      <td>230</td>
-      <td>designer</td>
-      <td>230</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">DE005</th>
-      
-      <td>flowers</td>
-      <td>13</td>
-      <td>superShipping</td>
-      <td>2019-06-06</td>
-      <td>designer</td>
-      <td>230</td>
-      <td>designer</td>
-      <td>230</td>
-    </tr>
-    
-  </tbody>
+    </tbody>
   <!--Table body-->
 
 

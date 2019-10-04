@@ -6,86 +6,103 @@
 </div>
 
 <jw-modal id="custom-modal-1" >
-    <div style="height:350px">
+    <div style="height:420px">
             
                     <h5 class="card-header">Request</h5>
                     
-                        
                 
                             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
+
+                                    
                                     <div class="row">
+                                            <div class=" col-xs-5 form-group">
+                                                    <label>Type</label>
+                                                    <select formControlName="type" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.type.errors }">
+                                                        
+                                                        <option value="Mr">Store-item</option>
+                                                        <option value="Mrs">decoration</option>
+                                                    </select>
+                                                    <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+                                                        <div *ngIf="f.type.errors.required">type is required</div>
+                                                    </div>
+                                                </div>
                                            
                                     <div class="col-xs-5 form-group">
                                             <label>Items</label><br>
-                                    <input type="text" placeholder="" formControlName="decorations" class="form-control" [formControl]="control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.decorations.errors }" />
+                                    <input type="text" placeholder="" formControlName="item" class="form-control" [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f.item.errors }" />
                                     <mat-autocomplete #auto="matAutocomplete">
                                             <mat-option *ngFor="let itemv of filtereditemsv | async" [value]="itemv">
                                               {{itemv}}
                                             </mat-option>
                                           </mat-autocomplete>
-                                          <div *ngIf="submitted && f.decorations.errors" class="invalid-feedback">
-                                                  <div *ngIf="f.decorations.errors.required">item is required</div>       
+                                          <div *ngIf="submitted && f.item.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.item.errors.required">item is required</div>       
                                           </div>
                                 </div>
                                  
-                
-                
+                               
+                                <div class=" col-xs-5 form-group" >
+                                        <label>	Stock In Hand</label>
+                                            <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" class="form-control" formControlName="stockInHand" [ngClass]="{ 'is-invalid': submitted && f.stockInHand.errors }" >
+                                            <owl-date-time #dt1></owl-date-time>
+
+                                            <div *ngIf="submitted && f.stockInHand.errors" class="invalid-feedback">
+                                                <div *ngIf="f.stockInHand.errors.required">stock is required</div>       
+                                             </div>
+                                 </div>
+                                 
+                                 <div class=" col-xs-5 form-group" >
+                                    <label>	Issued</label>
+                                        <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control" formControlName="issued" [ngClass]="{ 'is-invalid': submitted && f.issued.errors }" >
+                                        <owl-date-time #dt></owl-date-time>
+
+                                        <div *ngIf="submitted && f.issued.errors" class="invalid-feedback">
+                                            <div *ngIf="f.issued.errors.required">date is required</div>       
+                                       </div>
+                                 </div>
+                                  
+                               
                         
                             <div class="col-xs-5 form-group">
-                                <label>Quantity</label>
-                                <input type="number" formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" />
-                                <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
-                                    <div *ngIf="f.quantity.errors.required">Quantity is required</div>
+                                <label>Rate Rs.</label>
+                                <input type="number" formControlName="rateRs" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.rateRs.errors }" />
+                                <div *ngIf="submitted && f.rateRs.errors" class="invalid-feedback">
+                                    <div *ngIf="f.rateRs.errors.required">Rate is required</div>
                                 </div>
                             </div>
+                            <div class="col-xs-5 form-group">
+                                    <label>Value Rs.</label>
+                                    <input type="number" formControlName="ValueRs" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ValueRs.errors }" />
+                                    <div *ngIf="submitted && f.ValueRs.errors" class="invalid-feedback">
+                                        <div *ngIf="f.ValueRs.errors.required">Value is required</div>
+                                    </div>
+                                </div>
                         </div>
                         <div class="row">
-                    <div class="col-xs-5 form-group">
-                            <label>Supplier</label>
-                           
-                            <select   formControlName="supplier" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.supplier.errors }">
-                                    
-                                    <option >Vijaya</option>
-                                    <option >Kig deliver</option>
-                                    <option >SuperFast</option>
-                                </select>
-                    <div *ngIf="submitted && f.supplier.errors" class="invalid-feedback">
-                         <div *ngIf="f.supplier.errors.required">supplier is required</div>
-                    </div>
-                 </div>
+                    
                 
                 
                 
                
                 <div class=" col-xs-5 form-group">
-                    <label>Price</label>
-                    <input type="price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
-                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                        <div *ngIf="f.price.errors.required">Price is required</div>
+                    <label>Cts</label>
+                    <input type="price" formControlName="cts" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cts.errors }" />
+                    <div *ngIf="submitted && f.cts.errors" class="invalid-feedback">
+                        <div *ngIf="f.cts.errors.required">Cts is required</div>
                     </div>
                 </div>
+                <div class=" col-xs-5 form-group">
+                        <label>Rrs</label>
+                        <input type="price" formControlName="Rrs" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Rrs.errors }" />
+                        <div *ngIf="submitted && f.Rrs.errors" class="invalid-feedback">
+                            <div *ngIf="f.Rrs.errors.required">Rrs is required</div>
+                        </div>
+                    </div>
                         </div>
                         <div class="row">
-                <div class=" col-xs-5 form-group">
-                        <label>Request</label>
-                        <select formControlName="request" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.request.errors }">
-                            
-                            <option value="Mr">Cheff</option>
-                            <option value="Mrs">Staff member</option>
-                            <option value="Miss">Store keeper</option>
-                        </select>
-                        <div *ngIf="submitted && f.request.errors" class="invalid-feedback">
-                            <div *ngIf="f.request.errors.required">Request is required</div>
-                        </div>
-                    </div>
                 
-                    <div class=" col-xs-5 form-group" >
-                        <label>Date Time</label>
-                           
-                            <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control">
-                            <owl-date-time #dt></owl-date-time>
-                        
-                </div>
+                
+                   
                 </div>
            <div class="row">
                     <div class="fix ">

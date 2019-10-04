@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataStorageServiceSanaya } from '../shared/data-storage.service';
 import { AuthService } from '../auth/auth.service';
+import { requestService } from '../stores/request/request.service';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +27,12 @@ export class HeaderComponent implements OnInit {
                   console.log(response);
               }
           );
+          this.DataStorageService.storerequest()
+          .subscribe(
+            (response: Response) => {
+                console.log(response);
+              }
+           );
           this.DataStorageService.storedOders()
           .subscribe(
               (response: Response) => {
@@ -36,6 +43,7 @@ export class HeaderComponent implements OnInit {
   onFatchData(){
       this.DataStorageService.getSItem();
       this.DataStorageService.getdItem();
+      this.DataStorageService.getrequest();
       this.DataStorageService.getorder();
   }
   onLogout(){
