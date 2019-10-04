@@ -10,7 +10,7 @@ import { orderService } from './orders.service';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
-
+  
   order:order[];
   constructor(private orderService:orderService,private route:ActivatedRoute, private router:Router) { }
 
