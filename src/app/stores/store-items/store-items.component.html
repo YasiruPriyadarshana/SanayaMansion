@@ -24,7 +24,7 @@
         <td>{{sitem.date}}</td>
         <td>{{sitem.request}}</td>
         <td>{{sitem.price}}</td>
-        <button class="btn btn-success">Edit</button>
+        <button class="btn btn-success" (click)="openedit(i)">Edit</button>
         <button class="btn btn-danger" (click)="onDeleteItem(i)">Delete</button>
       </tr>
       

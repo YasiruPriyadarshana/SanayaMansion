@@ -87,7 +87,7 @@ const routes: Routes = [
     { path: '' ,component: DecorationComponent},
     { path: 'storeItems',component: StoreItemsComponent},
     { path: 'requested',component: RequestComponent},
-    { path: 'pop', component: PopupComponent },
+    { path: 'pop/:id', component: PopupComponent },
     
   ]},
   { path: 'signup' , component:SignupComponent},

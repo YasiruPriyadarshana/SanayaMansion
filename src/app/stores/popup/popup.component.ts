@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Observable } from 'rxjs';
 import {startWith, map} from 'rxjs/operators';
 import { storeItemService } from '../store-items/store-item.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 
 @Component({
@@ -18,6 +18,7 @@ export class PopupComponent implements OnInit {
     control = new FormControl();
     control2 = new FormControl();
     id:number;
+    ids:number;
     editMode = false;
     
     itemv: string[] = ['Chicken', 'Fish', 'Green beans', 'Mung bean'];
@@ -32,7 +33,16 @@ export class PopupComponent implements OnInit {
             startWith(''),
             map(value => this._filter(value))
           );
+          this.route.params.subscribe(
+            (params:Params) => {
+              this.ids = +params['id'];
+              this.editMode = params['id'] != null;
+              this.initForm(this.ids);
+            }
+          );
           
+          if(!this.editMode){
+
           this.registerForm = this.formBuilder.group({
               id:['',Validators.nullValidator],
               date:['',Validators.required],
@@ -43,6 +53,8 @@ export class PopupComponent implements OnInit {
               request: ['', Validators.required],
               
           });
+
+        }
     }
 
     
@@ -50,14 +62,14 @@ get f() { return this.registerForm.controls; }
 
 onSubmit() {
     this.submitted = true;
-
+    
     
     if (this.registerForm.invalid) {
         console.log("fup");
         return;
     }
     if(this.editMode){
-          this.storeItemService.updatesitem(this.id, this.registerForm.value);
+          this.storeItemService.updatesitem(this.ids, this.registerForm.value);
         }else{
           this.storeItemService.addsitem(this.registerForm.value);
         }
@@ -66,7 +78,7 @@ onSubmit() {
 
 }
 onCancel(){
-    this.router.navigate(['../'], {relativeTo: this.route});
+    this.router.navigate(['../../'], {relativeTo: this.route});
     this.ngOnInit();
   }
 
@@ -86,8 +98,50 @@ private _filter(value: string): string[] {
     openModal(id: string) {
         this.modalService.open(id);
     }
+    openModal2(id: string) {
+      this.modalService.open(id);
+      this.initForm(this.ids);
+  }
 
     closeModal(id: string) {
         this.modalService.close(id);
     }
+
+
+
+   private initForm(ids:number){
+      let id='';
+      let date='';
+      let item='';
+      let quantity='';
+      let supplier='';
+      let price='';
+      let request='';
+  
+      
+        const items=this.storeItemService.getsitems(ids);
+        id=items.id;
+        date=items.date;
+        item=items.item;
+        quantity=items.quantity;
+        supplier=items.supplier;
+        price=items.price;
+        request=items.request;
+        
+         
+      
+      this.registerForm =new FormGroup({
+        'id':new FormControl(id),
+        'date':new FormControl(date,Validators.required),
+        'item':new FormControl(item,Validators.required),
+        'quantity':new FormControl(quantity,Validators.required),
+        'supplier':new FormControl(supplier,Validators.required),
+        'price':new FormControl(price,Validators.required),
+        'request':new FormControl(request,Validators.required),
+             
+        
+      });
+    }
+
 }
+
