@@ -6,7 +6,9 @@
       <tr class="active">
         <th>Customer Number</th>
         <th>Customer Name</th>
+        <th>Number of Plates</th>
         <th>Menu Type</th>
+        <th>Welcome Drinks</th>
         <th>Amount</th>
         <th>Date</th>
         
@@ -21,8 +23,10 @@
           
       
       <td>{{order.customerName}}</td>
-      <td>{{order.menuType}}</td>
-      <td>{{order.amount}}</td>
+      <td>{{order.numberOfPlates}}</td>
+      <td>Rs {{order.menuType}}</td>
+      <td>{{order.welcomeDrinks}}</td>
+      <td>Rs {{order.amount}}.00</td>
       <td>{{order.date}}</td>
       
       <button class="btn btn-success">Edit</button>

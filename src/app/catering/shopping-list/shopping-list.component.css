@@ -1,0 +1,18 @@
+
+* { margin: 0; padding: 0; }
+
+#page-wrap { width: 800px; margin: 0 auto; }
+
+textarea { border: 0; font: 14px, Serif; overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+#terms { text-align: center; margin: 20px 0 0 0; }
+#terms h5 { text-transform: uppercase; font: 13px Helvetica, Sans-Serif; letter-spacing: 10px; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+#terms textarea { width: 100%; text-align: center;}
+
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+
+
+button{
+    margin-left: 25px;
+  }
