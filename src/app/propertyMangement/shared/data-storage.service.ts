@@ -15,10 +15,10 @@ export class DataStorageService {
     constructor(private http:HttpClient, private roomService: RoomService, private hallService: HallService, private vehiclelistService: VehicleListService){
     }
     StoreRooms() {
-       return this.http.put('https://ng-hotel-book.firebaseio.com/rooms.json',this.roomService.getRooms());
+       return this.http.put('https://sanayamansion-e55bf.firebaseio.com/rooms.json',this.roomService.getRooms());
     }
     getRooms(){
-        this.http.get<Room[]>('https://ng-hotel-book.firebaseio.com/rooms.json')
+        this.http.get<Room[]>('https://sanayamansion-e55bf.firebaseio.com/rooms.json')
         .subscribe(
             (rooms: Room[])=>{
                 this.roomService.setRooms(rooms);          
@@ -27,10 +27,10 @@ export class DataStorageService {
     }
 
     StoreHalls() {
-        return this.http.put('https://ng-hotel-book.firebaseio.com/halls.json',this.hallService.getHalls());
+        return this.http.put('https://sanayamansion-e55bf.firebaseio.com/halls.json',this.hallService.getHalls());
      }
      getHalls(){
-         this.http.get<Hall[]>('https://ng-hotel-book.firebaseio.com/halls.json')
+         this.http.get<Hall[]>('https://sanayamansion-e55bf.firebaseio.com/halls.json')
          .subscribe(
              (halls: Hall[])=>{
                  this.hallService.setHalls(halls);          
@@ -39,10 +39,10 @@ export class DataStorageService {
      }
 
      StoreVehicles() {
-        return this.http.put('https://ng-hotel-book.firebaseio.com/vehicles.json',this.vehiclelistService.getVehicles());
+        return this.http.put('https://sanayamansion-e55bf.firebaseio.com/vehicles.json',this.vehiclelistService.getVehicles());
      }
      getVehicles(){
-         this.http.get<Vehicle[]>('https://ng-hotel-book.firebaseio.com/vehicles.json')
+         this.http.get<Vehicle[]>('https://sanayamansion-e55bf.firebaseio.com/vehicles.json')
          .subscribe(
              (vehicles: Vehicle[])=>{
                  this.vehiclelistService.setVehicles(vehicles);          

@@ -1,7 +1,7 @@
 <div>
     
-    <button (click)="openModal('custom-modal-1')" class="btn btn-success pull-right">Add new Items</button>
-    
+    <button *ngIf="this.router.url === '/stores/storeItems'"  (click)="openModal('custom-modal-1')" class="btn btn-success pull-right">Add new Items</button>
+    <button  *ngIf="this.router.url !== '/stores/storeItems'" (click)="openModal2('custom-modal-1')" class="btn btn-success pull-right">Edit</button>
 </div>
 
 <jw-modal id="custom-modal-1" >

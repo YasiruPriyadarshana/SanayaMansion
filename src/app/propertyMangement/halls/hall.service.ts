@@ -7,9 +7,9 @@ export class HallService {
   hallSelected = new EventEmitter<Hall>();
 
   private  halls : Hall[] = [
-      new Hall('Vebber','https://www.venue.royalholloway.ac.uk/wp-content/uploads/2018/02/Founders-Dining-Hall-wedding-1200x630.jpg','100,000','new hall'),
-      new Hall('Vebber','https://www.burgfeistritz.com/wp-content/uploads/2018/07/wedding16-1200x630.jpg','100,000','new hall'),
-      new Hall('Vebber','https://www.manila-hotel.com.ph/wp-content/uploads/2018/01/5-1-1200x630.jpg','100,000','new hall'),
+      new Hall('Emerald','https://www.venue.royalholloway.ac.uk/wp-content/uploads/2018/02/Founders-Dining-Hall-wedding-1200x630.jpg','200,000','capacity-300 || No of Tv-15'),
+      new Hall('Sapphire','https://www.burgfeistritz.com/wp-content/uploads/2018/07/wedding16-1200x630.jpg','150,000','capacity-200 || No of Tv-10'),
+      new Hall('Vebber','https://www.manila-hotel.com.ph/wp-content/uploads/2018/01/5-1-1200x630.jpg','100,000','capacity-150 || No of Tv-10'),
 
       ];
 
