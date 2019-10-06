@@ -41,6 +41,7 @@ export class PopupComponent implements OnInit {
               this.initForm(this.ids);
             }
           );
+         
           
           if(!this.editMode){
 

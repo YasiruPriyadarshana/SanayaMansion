@@ -16,13 +16,16 @@ export class StoreItemsComponent implements OnInit {
   sitem:sitem[];
   Popup:PopupComponent;
 
-  constructor(private storeItemService:storeItemService,private route:ActivatedRoute, private router:Router) {}
+  constructor(private storeItemService:storeItemService,private route:ActivatedRoute, private router:Router) {
+    
+  }
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
         this.sitem =this.storeItemService.getsitem();
       }
     );
+  
   }
 
   onDeleteItem(index:number){

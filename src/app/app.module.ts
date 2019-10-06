@@ -137,6 +137,7 @@ import { PopupComponent3 } from './stores/popup3';
 import { requestService } from './stores/request/request.service';
 import { OrdersComponent } from './catering/orders/orders.component';
 import { orderService } from './catering/orders/orders.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -287,6 +288,7 @@ import { orderService } from './catering/orders/orders.service';
     DessertsComponent,
     DrinksComponent,
     OrdersComponent,
+    FooterComponent,
    
     
    
