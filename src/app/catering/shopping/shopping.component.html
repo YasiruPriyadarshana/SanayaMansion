@@ -1,0 +1,72 @@
+
+    <div class="col-xs-9">
+        
+       
+
+        <div id="page-wrap">
+ 
+            <div style="clear:both"></div>
+            
+            <table class="table table-striped w-auto">
+                <thead>
+              <tr class="active">
+                  <th>Item</th>
+                  <th>Description</th>
+                  <th>Unit Cost</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let shopping of shopping;let i = index">
+                <tr class="table-info" >
+                 <th scope="row" >{{shopping.item}}</th>
+                     
+                 
+                 <td>{{shopping.discription}}</td>
+                 <td>{{shopping.unitCost}}</td>
+                 <td>{{shopping.quantity}}</td>
+                 <td>{{shopping.price}}</td>
+                 
+                 
+                 <button class="btn btn-success fix1">Edit</button>
+                     <button class="btn btn-danger fix1" (click)="onDeleteShopping(i)">Delete</button>
+               </tr>
+               
+            </tbody>
+
+               
+            <tbody> 
+              
+              <tr>
+    
+                  <td colspan="2" class="blank"> </td>
+                  <td colspan="2" class="total-line">Total</td>
+                  <td class="total-value"><div *ngFor="let total of total">{{total}}</div></td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="blank"> </td>
+                  <td colspan="2" class="total-line">Amount Paid</td>
+    
+                  <td class="total-value"><textarea id="paid">$0.00</textarea></td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="blank"> </td>
+                  <td colspan="2" class="total-line balance">Balance Due</td>
+                  <td class="total-value balance"><div class="due">$875.00</div></td>
+              </tr>
+            </tbody> 
+            </table>
+            
+            <div id="terms">
+              <h5>Terms</h5>
+              <textarea>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</textarea>
+            </div>
+
+            <button class="btn btn-primary fix" onclick="myFunction()">Print</button>
+        
+        </div>
+        
+
+    </div>
+
+
