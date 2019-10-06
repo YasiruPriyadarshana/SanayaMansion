@@ -70,9 +70,9 @@
                         <label>Request</label>
                         <select formControlName="request" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.request.errors }">
                             
-                            <option value="Mr">Cheff</option>
-                            <option value="Mrs">Staff member</option>
-                            <option value="Miss">Store keeper</option>
+                            <option>Cheff</option>
+                            <option>Staff member</option>
+                            <option>Store keeper</option>
                         </select>
                         <div *ngIf="submitted && f.request.errors" class="invalid-feedback">
                             <div *ngIf="f.request.errors.required">Request is required</div>
