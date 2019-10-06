@@ -155,11 +155,8 @@ const routes: Routes = [
 
   {path: 'shopping-list',component: ShoppingListComponent},
   {path: 'orders',component: OrdersComponent },
-<<<<<<< HEAD
-  {path: 'footer',component: FooterComponent}
-=======
+  {path: 'footer',component: FooterComponent},
   {path: 'shopping',component: ShoppingComponent }
->>>>>>> e8f05a16bc0a732030c972087b28c4ea99b29937
 ];
 
 @NgModule({
