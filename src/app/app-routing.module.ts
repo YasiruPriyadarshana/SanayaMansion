@@ -60,6 +60,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { OrdersComponent } from './catering/orders/orders.component';
 import { FooterComponent } from './footer/footer.component';
+import { ShoppingComponent } from './catering/shopping/shopping.component';
 
 
 const routes: Routes = [
@@ -154,7 +155,11 @@ const routes: Routes = [
 
   {path: 'shopping-list',component: ShoppingListComponent},
   {path: 'orders',component: OrdersComponent },
+<<<<<<< HEAD
   {path: 'footer',component: FooterComponent}
+=======
+  {path: 'shopping',component: ShoppingComponent }
+>>>>>>> e8f05a16bc0a732030c972087b28c4ea99b29937
 ];
 
 @NgModule({

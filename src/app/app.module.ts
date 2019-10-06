@@ -138,6 +138,9 @@ import { requestService } from './stores/request/request.service';
 import { OrdersComponent } from './catering/orders/orders.component';
 import { orderService } from './catering/orders/orders.service';
 import { FooterComponent } from './footer/footer.component';
+import { ShoppingComponent } from './catering/shopping/shopping.component';
+import { shoppingService } from './catering/shopping/shopping.service';
+import { dessertsService } from './catering/restaurent/desserts/desserts.service';
 
 
 
@@ -289,6 +292,7 @@ import { FooterComponent } from './footer/footer.component';
     DrinksComponent,
     OrdersComponent,
     FooterComponent,
+    ShoppingComponent,
    
     
    
@@ -329,7 +333,7 @@ import { FooterComponent } from './footer/footer.component';
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,orderService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,requestService,AuthService,AuthGuard],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,orderService,shoppingService,dessertsService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,requestService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
