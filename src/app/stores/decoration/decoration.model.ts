@@ -1,6 +1,6 @@
 export class ditem{
     public id:string;
-    public item:string;
+    public decorations:string;
     public quantity:string;
     public supplier: string;
     public date:string;
@@ -8,9 +8,9 @@ export class ditem{
     public price:string;
 
 
-    constructor(id:string,item: string, quantity: string,supplier: string, date: string, request: string, price: string){
+    constructor(id:string,decorations: string, quantity: string,supplier: string, date: string, request: string, price: string){
         this.id=id;
-        this.item=item;
+        this.decorations=decorations;
         this.quantity=quantity;
         this.supplier=supplier;
         this.date=date;

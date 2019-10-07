@@ -1,4 +1,15 @@
 
+<div class="search-hero">
+  <input class="form-control"
+  style="box-orient: 0 10px 40px 0 #B0C1D9; font-family: FontAwesome;"
+   type="text"
+   name="search"
+   [(ngModel)]="searchText"
+   autocomplete="off"
+   placeholder="&#61442; Search store Item">
+</div>
+
+
 <table class="table table-striped w-auto">
 
     <thead>
@@ -13,7 +24,12 @@
       </tr>
     </thead>
     
-    <tbody *ngFor="let sitem of sitem;let i = index">
+    <tbody *ngFor="let sitem of sitem| filter:searchText;let i = index">
+      <!-- <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr> -->
        
       <tr class="table-info" >
         <th scope="row" >ST{{sitem.id}}</th>

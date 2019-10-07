@@ -143,8 +143,10 @@ import { shoppingService } from './catering/shopping/shopping.service';
 import { dessertsService } from './catering/restaurent/desserts/desserts.service';
 import { drinksService } from './catering/restaurent/drinks/drinks.service';
 import { pastryService } from './catering/restaurent/pastry/pastry.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CarouselComponent } from './carousel/carousel.component';
 
-import { Ng2SearchPipeModule } from'ng2-search-filter';
+
 import { from } from 'rxjs';
 
 
@@ -297,6 +299,8 @@ import { from } from 'rxjs';
     OrdersComponent,
     FooterComponent,
     ShoppingComponent,
+    CarouselComponent,
+
    
     
    
@@ -332,6 +336,9 @@ import { from } from 'rxjs';
     HttpClientModule,
     Ng2SearchPipeModule,
     
+
+
+    Ng2SearchPipeModule,
 
     BrowserModule,
         FormsModule,

@@ -14,7 +14,9 @@ import { PopupComponent } from '../popup/popup.component';
 })
 export class StoreItemsComponent implements OnInit {
   sitem:sitem[];
+  
   Popup:PopupComponent;
+  
 
   constructor(private storeItemService:storeItemService,private route:ActivatedRoute, private router:Router) {
     
@@ -25,7 +27,7 @@ export class StoreItemsComponent implements OnInit {
         this.sitem =this.storeItemService.getsitem();
       }
     );
-  
+      
   }
 
   onDeleteItem(index:number){

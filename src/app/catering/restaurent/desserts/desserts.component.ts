@@ -19,6 +19,7 @@ export class DessertsComponent implements OnInit {
   shopping:shopping;
   quan:string;
   total:number;
+  array=[];
   constructor(private formBuilder: FormBuilder,private dessertsService:dessertsService,private route:ActivatedRoute, private router:Router,private shoppingService:shoppingService) { 
     
   }
@@ -42,5 +43,12 @@ export class DessertsComponent implements OnInit {
     this.shoppingService.addshopping(a)
     
     
+  }
+  downloadpdf(){
+    this.dessert =this.dessertsService.getdesserts(1);
+    this.array.push(+'    '++'   '++'   '++'    '++'   '++'    '+);
+    const doc = new jsPDF();
+    doc.text(this.array, 10, 10);
+    doc.save('store.pdf');
   }
 }
