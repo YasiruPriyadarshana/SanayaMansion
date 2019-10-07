@@ -5,309 +5,42 @@
     <!------ Include the above in your HEAD tag ---------->
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
-    
+    <div class="search-hero">
+            <input class="form-control"
+            style="box-orient:0 10px 40px 0 #B0C1D9; font-family: FontAwesoe;"
+             type="text"
+             name="search"
+             [(ngModel)]="SearchText"
+             autocomplete="off"
+             placeholder="&#61442; Search Drinks">
+        </div>
     <div class="container-fluid">
             <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"    *ngFor="let drinks of drinks|  filter:SearchText ;let i = index">
                             <div class="tile">
-                                <div class="wrapper">
-                                    <div class="header">TANGERINE MARTINI</div>
+                                <div class="wrapper" >
+                                    <div class="header">{{drinks.drinks}}</div>
             
                                     <div class="banner-img">
-                                        <img src="../assets/images/Tangerine Martini.jpg" alt="Image 1">
+                                        <img src="{{drinks.imagePath}}" alt="Image 1">
                                     </div>
                                     <div class="dates">
                                         <div class="start">
-                                            <strong>PRICE</strong> Rs. 60.00
+                                            <strong>PRICE</strong> {{drinks.price}}
                                             <span></span>
-                                        </div>
-                                        <div class="ends">
-                                            <strong>QUANTITY</strong> 
-                                            <input type="number" formControlName="quantity">
-                                        </div>
-                                    </div>
-                                    
-                                        <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                    
-                                </div>
-                            </div> 
-                        </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="tile">
-                        <div class="wrapper">
-                            <div class="header">PUMPKIN PIE</div>
-    
-                            <div class="banner-img">
-                                <img src="../assets/images/Pumpkin Pie Smoothie.jpg" alt="Image 1">
-                            </div>
-                            <div class="dates">
-                                <div class="start">
-                                    <strong>PRICE</strong> Rs. 70.00
-                                    <span></span>
-                                </div>
-                                <div class="ends">
-                                    <strong>QUANTITY</strong> 
-                                    <input type="number" formControlName="quantity">
-                                </div>
-                            </div>
-                            
-                                <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                            
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="tile">
-                        <div class="wrapper">
-                            <div class="header">HIBISCUS MINT TEA</div>
-    
-                            <div class="banner-img">
-                                <img src="../assets/images/Hibiscus Mint Tea.jpg" alt="Image 1">
-                            </div>
-                            <div class="dates">
-                                <div class="start">
-                                    <strong>PRICE</strong> Rs. 40.00
-                                    <span></span>
-                                </div>
-                                <div class="ends">
-                                    <strong>QUANTITY</strong> 
-                                    <input type="number" formControlName="quantity">
-                                </div>
-                            </div>
-                            
-                                <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                            
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="tile">
-                        <div class="wrapper">
-                            <div class="header">APPLE PIE CIDER</div>
-    
-                            <div class="banner-img">
-                                <img src="../assets/images/Apple Pie Cider.jpg" alt="Image 1">
-                            </div>
-                            <div class="dates">
-                                <div class="start">
-                                    <strong>PRICE</strong> Rs. 50.00
-                                    <span></span>
-                                </div>
-                                <div class="ends">
-                                    <strong>QUANTITY</strong> 
-                                    <input type="number" formControlName="quantity">
-                                </div>
-                            </div>
-                            
-                                <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                            
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="tile">
-                        <div class="wrapper">
-                            <div class="header">CRANBERRY SANGRIA</div>
-    
-                            <div class="banner-img">
-                                <img src="../assets/images/Cranberry Sangria.jpg" alt="Image 1">
-                            </div>
-                            <div class="dates">
-                                <div class="start">
-                                    <strong>PRICE</strong> Rs. 60.00
-                                    <span></span>
-                                </div>
-                                <div class="ends">
-                                    <strong>QUANTITY</strong> 
-                                    <input type="number" formControlName="quantity">
-                                </div>
-                            </div>
-                            
-                                <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                            
-                        </div>
-                    </div> 
-                </div>
-    
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="tile">
-                            <div class="wrapper">
-                                <div class="header">LEMONADE</div>
-        
-                                <div class="banner-img">
-                                    <img src="../assets/images/Lemonade.jpg" alt="Image 1">
-                                </div>
-                                <div class="dates">
-                                    <div class="start">
-                                        <strong>PRICE</strong> Rs. 40.00
-                                        <span></span>
-                                    </div>
-                                    <div class="ends">
-                                        <strong>QUANTITY</strong> 
-                                        <input type="number" formControlName="quantity">
-                                    </div>
-                                </div>
-                                
-                                    <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                
-                            </div>
-                        </div> 
-                    </div>
-    
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                            <div class="tile">
-                                <div class="wrapper">
-                                    <div class="header">LUSCIOUS SLUSH</div>
-            
-                                    <div class="banner-img">
-                                        <img src="../assets/images/Luscious Slush Punch.jpg" alt="Image 1">
-                                    </div>
-                                    <div class="dates">
-                                        <div class="start">
-                                            <strong>PRICE</strong> Rs. 40.00
-                                            <span></span>
-                                        </div>
-                                        <div class="ends">
-                                            <strong>QUANTITY</strong> 
-                                            <input type="number" formControlName="quantity">
-                                        </div>
-                                    </div>
-                                    
-                                        <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                    
-                                </div>
-                            </div> 
-                        </div>
-    
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                <div class="tile">
-                                    <div class="wrapper">
-                                        <div class="header">CREAMY HOT COCOA</div>
-                
-                                        <div class="banner-img">
-                                            <img src="../assets/images/Creamy Hot Cocoa.jpg" alt="Image 1">
-                                        </div>
-                                        <div class="dates">
-                                            <div class="start">
-                                                <strong>PRICE</strong> Rs. 70.00
-                                                <span></span>
-                                            </div>
-                                            <div class="ends">
-                                                <strong>QUANTITY</strong> 
-                                                <input type="number" formControlName="quantity">
-                                            </div>
-                                        </div>
-                                        
-                                            <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                        
-                                    </div>
-                                </div> 
-                            </div>
-    
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <div class="tile">
-                                        <div class="wrapper">
-                                            <div class="header">BEER MARGARITAS</div>
-                    
-                                            <div class="banner-img">
-                                                <img src="../assets/images/Beer Margaritas.jpg" alt="Image 1">
-                                            </div>
-                                            <div class="dates">
-                                                <div class="start">
-                                                    <strong>PRICE</strong> Rs. 70.00
-                                                    <span></span>
-                                                </div>
-                                                <div class="ends">
-                                                    <strong>QUANTITY</strong> 
-                                                    <input type="number" formControlName="quantity">
-                                                </div>
-                                            </div>
-                                            
-                                                <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                            
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                        <div class="tile">
-                                            <div class="wrapper">
-                                                <div class="header">GROOVY GREEN</div>
-                        
-                                                <div class="banner-img">
-                                                    <img src="../assets/images/Groovy Green.jpg" alt="Image 1">
-                                                </div>
-                                                <div class="dates">
-                                                    <div class="start">
-                                                        <strong>PRICE</strong> Rs. 70.00
-                                                        <span></span>
-                                                    </div>
-                                                    <div class="ends">
-                                                        <strong>QUANTITY</strong> 
-                                                        <input type="number" formControlName="quantity">
-                                                    </div>
-                                                </div>
-                                                
-                                                    <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                                
-                                            </div>
                                         </div> 
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="tile">
-                                                <div class="wrapper">
-                                                    <div class="header">HOT APPLE CIDER</div>
-                            
-                                                    <div class="banner-img">
-                                                        <img src="../assets/images/Hot Apple Cider.jpg" alt="Image 1">
-                                                    </div>
-                                                    <div class="dates">
-                                                        <div class="start">
-                                                            <strong>PRICE</strong> Rs. 50.00
-                                                            <span></span>
-                                                        </div>
-                                                        <div class="ends">
-                                                            <strong>QUANTITY</strong> 
-                                                            <input type="number" formControlName="quantity">
-                                                        </div>
-                                                    </div>
-                                                    
-                                                        <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                                    
-                                                </div>
-                                            </div> 
+                                        <div class="ends">
+                                            <strong>QUANTITY</strong> 
+                                            <input  #quantity type="number" formControlName="quantity">
                                         </div>
-    
-                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="tile">
-                                                    <div class="wrapper">
-                                                        <div class="header">BANANA SMOOTHIE</div>
-                                
-                                                        <div class="banner-img">
-                                                            <img src="../assets/images/Banana Smoothie.jpg" alt="Image 1">
-                                                        </div>
-                                                        <div class="dates">
-                                                            <div class="start">
-                                                                <strong>PRICE</strong> Rs. 50.00
-                                                                <span></span>
-                                                            </div>
-                                                            <div class="ends">
-                                                                <strong>QUANTITY</strong> 
-                                                                <input type="number" formControlName="quantity">
-                                                            </div>
-                                                        </div>
-                                                        
-                                                            <button class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
-                                                        
-                                                    </div>
-                                                </div> 
-                                            </div>
-                
-    
-    
-    
-               
-    
-                
+                                    </div>
+                                    
+                                        <button (click)="onAdd(i,quantity.value)" class="btn btn-primary fix" routerLinkActive="active" routerLink='pastry'>ADD</button> 
+                                    
+                                </div>
+                            </div> 
+                        </div>
+              
             </div>
         </div>
     </div>

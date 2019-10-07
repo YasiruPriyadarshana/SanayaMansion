@@ -15,6 +15,15 @@ export class dessertsService{
         new desserts('ANGEL DELIGHT','../assets/images/food-Angel-Delight.jpg','80.00')
         ,new desserts('CRUMBLE BAR','../assets/images/Buttery Raspberry Crumble Bars.jpg','50.00')
         ,new desserts('GOOEY BROWNIES','../assets/images/Ultimate Gooey Brownies.jpg','50.00')
+        ,new desserts('CRANBERRY SANGRIA','../assets/images/Chocolate And Strawberry Cake.jpg','50.00')
+        ,new desserts('STRAWBERRY CAKE','../assets/images/Chocolate And Strawberry Cake.jpg','80.00')
+        ,new desserts('CREPE CAKE','../assets/images/Crepe Cake.jpg','50.00')
+        ,new desserts('CHEESECAKE BAR','../assets/images/Cheesecake Bars.jpg','50.00')
+        ,new desserts('LEMON BAR','../assets/images/Lemon Bars.jpg','50.00')
+        ,new desserts('MOUSSE CAKE','../assets/images/Mousse Cake.jpg','80.00')
+        ,new desserts('BANANA PUDDING','../assets/images/Banana Pudding.jpg','50.00')
+        ,new desserts('CHOCOLATE TARTS','../assets/images/Chocolate Tarts.jpg','50.00')
+        ,new desserts('TIRAMISU','../assets/images/Tiramisu.jpg','50.00')
        
       ];
     setdesserts(desserts: desserts[]){

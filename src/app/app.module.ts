@@ -141,7 +141,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ShoppingComponent } from './catering/shopping/shopping.component';
 import { shoppingService } from './catering/shopping/shopping.service';
 import { dessertsService } from './catering/restaurent/desserts/desserts.service';
+import { drinksService } from './catering/restaurent/drinks/drinks.service';
+import { pastryService } from './catering/restaurent/pastry/pastry.service';
 
+import { Ng2SearchPipeModule } from'ng2-search-filter';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -326,6 +330,7 @@ import { dessertsService } from './catering/restaurent/desserts/desserts.service
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
     
 
     BrowserModule,
@@ -333,7 +338,7 @@ import { dessertsService } from './catering/restaurent/desserts/desserts.service
         ModalModule,
     
   ],
-  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,orderService,shoppingService,dessertsService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,requestService,AuthService,AuthGuard],
+  providers: [HallService,VehicleListService,DataStorageService,DataStorageServiceSanaya,RoomService,RoomEditComponent,ShoppingListService,orderService,shoppingService,dessertsService,drinksService,pastryService, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},storeItemService,decorationItemService,requestService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

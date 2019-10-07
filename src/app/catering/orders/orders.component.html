@@ -29,7 +29,7 @@
       <td>Rs {{order.amount}}.00</td>
       <td>{{order.date}}</td>
       
-      <button class="btn btn-success">Edit</button>
+      <button class="btn btn-success" (click)="initForm(i)">Edit</button>
           <button class="btn btn-danger" (click)="onDeleteOrder(i)">Delete</button>
     </tr>
     </tbody>

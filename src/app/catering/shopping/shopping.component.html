@@ -23,9 +23,9 @@
                      
                  
                  <td>{{shopping.discription}}</td>
-                 <td>{{shopping.unitCost}}</td>
+                 <td>Rs {{shopping.unitCost}}.00</td>
                  <td>{{shopping.quantity}}</td>
-                 <td>{{shopping.price}}</td>
+                 <td>Rs {{shopping.price}}.00</td>
                  
                  
                  <button class="btn btn-success fix1">Edit</button>
@@ -43,17 +43,7 @@
                   <td colspan="2" class="total-line">Total</td>
                   <td class="total-value"><div *ngFor="let total of total">{{total}}</div></td>
               </tr>
-              <tr>
-                  <td colspan="2" class="blank"> </td>
-                  <td colspan="2" class="total-line">Amount Paid</td>
-    
-                  <td class="total-value"><textarea id="paid">$0.00</textarea></td>
-              </tr>
-              <tr>
-                  <td colspan="2" class="blank"> </td>
-                  <td colspan="2" class="total-line balance">Balance Due</td>
-                  <td class="total-value balance"><div class="due">$875.00</div></td>
-              </tr>
+              
             </tbody> 
             </table>
             
