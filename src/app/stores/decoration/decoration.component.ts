@@ -30,10 +30,15 @@ export class DecorationComponent implements OnInit {
     this.ngOnInit();
   }
   downloadpdf(){
-    this.ditem2 =this.decorationItemService.getditems(1);
-    this.array.push(this.ditem2.id+'    '+this.ditem2.decorations+'   '+this.ditem2.supplier+'   '+this.ditem2.price+'    '+this.ditem2.request+'   '+this.ditem2.date+'    '+this.ditem2.quantity);
     const doc = new jsPDF();
+    for(let i=0;i<3;i++){
+    this.ditem2 =this.decorationItemService.getditems(i);
+    this.array.push(this.ditem2.id+'    '+this.ditem2.decorations+'   '+this.ditem2.supplier+'   '+this.ditem2.price+'    '+this.ditem2.request+'   '+this.ditem2.date+'    '+this.ditem2.quantity);
+    
     doc.text(this.array, 10, 10);
+  
+    
+    }
     doc.save('store.pdf');
   }
 }
