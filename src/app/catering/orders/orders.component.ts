@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { order } from './orders.model';
 import { orderService } from './orders.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-orders',
@@ -13,6 +13,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class OrdersComponent implements OnInit {
   
   order:order[];
+  order2:order;
+  array=[];
   constructor(private orderService:orderService,private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {
@@ -62,6 +64,17 @@ export class OrdersComponent implements OnInit {
     // });
   }
 
-
+  downloadpdf(){
+    const doc = new jsPDF();
+    for(let i=0;i<3;i++){
+    this.order2 =this.orderService.getorders(i);
+    this.array.push(this.order2.customerNo+'    '+this.order2.customerName+'   '+this.order2.numberOfPlates+'   '+this.order2.menuType+'    '+this.order2.welcomeDrinks+'   '+this.order2.amount+'    '+this.order2.date);
+    
+    doc.text(this.array, 10, 10);
+  
+    
+    }
+    doc.save('store.pdf');
+  }
 
 }

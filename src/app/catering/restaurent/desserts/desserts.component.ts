@@ -5,6 +5,7 @@ import { desserts } from './desserts.model';
 import { shoppingService } from '../../shopping/shopping.service';
 import { shopping } from '../../shopping/shopping.model';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-desserts',
@@ -16,10 +17,11 @@ export class DessertsComponent implements OnInit {
   
   desserts:desserts[];
   dessert:desserts;
+ 
   shopping:shopping;
   quan:string;
   total:number;
-  array=[];
+ 
   constructor(private formBuilder: FormBuilder,private dessertsService:dessertsService,private route:ActivatedRoute, private router:Router,private shoppingService:shoppingService) { 
     
   }
@@ -44,11 +46,5 @@ export class DessertsComponent implements OnInit {
     
     
   }
-  downloadpdf(){
-    this.dessert =this.dessertsService.getdesserts(1);
-    this.array.push(+'    '++'   '++'   '++'    '++'   '++'    '+);
-    const doc = new jsPDF();
-    doc.text(this.array, 10, 10);
-    doc.save('store.pdf');
-  }
+  
 }
