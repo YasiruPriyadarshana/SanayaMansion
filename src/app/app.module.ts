@@ -142,6 +142,7 @@ import { ShoppingComponent } from './catering/shopping/shopping.component';
 import { shoppingService } from './catering/shopping/shopping.service';
 import { dessertsService } from './catering/restaurent/desserts/desserts.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 
@@ -295,6 +296,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     OrdersComponent,
     FooterComponent,
     ShoppingComponent,
+    CarouselComponent,
 
    
     

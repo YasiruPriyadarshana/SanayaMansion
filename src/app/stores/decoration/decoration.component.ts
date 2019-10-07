@@ -11,14 +11,18 @@ import * as jsPDF from 'jspdf';
 })
 export class DecorationComponent implements OnInit {
   ditem:ditem[];
+  ditem2:ditem;
+  array=[];
   constructor(private decorationItemService:decorationItemService,private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
         this.ditem =this.decorationItemService.getditem();
+        
       }
     );
+  
   }
 
   onDeleteItem(index:number){
@@ -26,9 +30,10 @@ export class DecorationComponent implements OnInit {
     this.ngOnInit();
   }
   downloadpdf(){
-    this.ngOnInit();
+    this.ditem2 =this.decorationItemService.getditems(1);
+    this.array.push(this.ditem2.id+'    '+this.ditem2.decorations+'   '+this.ditem2.supplier+'   '+this.ditem2.price+'    '+this.ditem2.request+'   '+this.ditem2.date+'    '+this.ditem2.quantity);
     const doc = new jsPDF();
-    doc.text("", 10, 10);
+    doc.text(this.array, 10, 10);
     doc.save('store.pdf');
   }
 }
