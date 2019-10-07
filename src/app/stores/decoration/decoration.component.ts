@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ditem } from './decoration.model';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { decorationItemService } from './decoration.service';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-decoration',
@@ -24,5 +25,10 @@ export class DecorationComponent implements OnInit {
     this.decorationItemService.deleteditem(index);
     this.ngOnInit();
   }
-
+  downloadpdf(){
+    this.ngOnInit();
+    const doc = new jsPDF();
+    doc.text("", 10, 10);
+    doc.save('store.pdf');
+  }
 }

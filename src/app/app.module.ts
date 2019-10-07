@@ -141,6 +141,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ShoppingComponent } from './catering/shopping/shopping.component';
 import { shoppingService } from './catering/shopping/shopping.service';
 import { dessertsService } from './catering/restaurent/desserts/desserts.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 
@@ -293,6 +295,7 @@ import { dessertsService } from './catering/restaurent/desserts/desserts.service
     OrdersComponent,
     FooterComponent,
     ShoppingComponent,
+
    
     
    
@@ -327,6 +330,9 @@ import { dessertsService } from './catering/restaurent/desserts/desserts.service
     OwlNativeDateTimeModule,
     HttpClientModule,
     
+
+
+    Ng2SearchPipeModule,
 
     BrowserModule,
         FormsModule,

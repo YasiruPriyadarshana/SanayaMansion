@@ -14,6 +14,7 @@ import { PopupComponent } from '../popup/popup.component';
 })
 export class StoreItemsComponent implements OnInit {
   sitem:sitem[];
+  
   Popup:PopupComponent;
 
   constructor(private storeItemService:storeItemService,private route:ActivatedRoute, private router:Router) {

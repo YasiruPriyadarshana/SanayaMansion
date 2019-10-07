@@ -1,4 +1,12 @@
-
+<div class="search-hero">
+    <input class="form-control"
+    style="box-orient: 0 10px 40px 0 #B0C1D9; font-family: FontAwesome;"
+     type="text"
+     name="search"
+     [(ngModel)]="searchText"
+     autocomplete="off"
+     placeholder="&#61442; Search Request Item">
+  </div>
 <!--Table-->
 <table class="table table-striped w-auto">
 
@@ -17,7 +25,7 @@
     </tr>
   </thead>
   
-  <tbody *ngFor="let request of request;let i = index">
+  <tbody *ngFor="let request of request| filter:searchText;let i = index">
        
       <tr class="table-info" >
         <th scope="row" >RQ{{request.id}}</th>

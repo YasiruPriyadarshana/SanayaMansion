@@ -1,3 +1,12 @@
+<div class="search-hero">
+    <input class="form-control"
+    style="box-orient: 0 10px 40px 0 #B0C1D9; font-family: FontAwesome;"
+     type="text"
+     name="search"
+     [(ngModel)]="searchText"
+     autocomplete="off"
+     placeholder="&#61442; Search Decoration Item">
+  </div>
 
 <!--Table-->
 <table class="table table-striped w-auto">
@@ -17,7 +26,7 @@
   <!--Table head-->
 
   <!--Table body-->
-  <tbody *ngFor="let ditem of ditem;let i = index">
+  <tbody *ngFor="let ditem of ditem| filter:searchText;let i = index">
    <tr class="table-info" >
     <th scope="row" >DE{{ditem.id}}</th>
         
@@ -36,3 +45,4 @@
 
 </table>
 <app-popup2></app-popup2>
+<button (click)="downloadpdf()">Save Pdf</button>
